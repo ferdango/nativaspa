@@ -1,0 +1,136 @@
+.footer-container{
+    background: $white;
+    display: flex;
+    flex-direction: column;
+
+    .box{
+        &-top{
+            width: 100%;
+            max-width: 1024px;
+            margin: auto;
+            padding: 60px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .footer-nav-section{
+                display: flex;
+                width: 25%;
+                max-width: 400px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                &:last-child{
+                    width: auto;
+                    align-items: center;
+                }
+
+                .title{
+                    text-transform: uppercase;
+                    font-family: $PrimaryBold;
+                    font-size: 18px;
+                    color: $blue-light;
+                }
+
+                .nav{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    &__item{
+                        font-size: 15px;
+                        color: #aaaaaa;
+                        font-family: $PrimarySemi;
+                        padding: 10px 0;
+                        padding-left: 10px;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            background: $blue-light;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            position: absolute;
+                            display: inline-block;
+                            top: calc(50% - 2px);
+                            left: 0px;
+                        }
+                    }
+
+                    &.social-media{
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        & .nav__item{
+                            border-radius: 50%;
+                            border: 3px solid #aaaaaa;
+                            margin-right: 20px;
+                            padding: 0;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:last-child{
+                                margin-right: 0;
+                            }
+
+                            .icon-social{
+                                width: 15px;
+                                height: 15px;
+                                color: #aaaaaa;
+                            }
+
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-center{
+            width: 100%;
+            max-width: 1024px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 0 0 20px 0;
+
+            .terms-content, .claim-book{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 13px;
+                color: #aaaaaa;
+
+                .icon{
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                }
+            }
+
+            .terms-content .text{
+                border-bottom: 2px solid rgba(#aaaaaa, .55);
+            }
+        }
+
+        &-bottom{
+            width: 100%;
+            max-width: 1024px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            color: #aaaaaa;
+            margin: auto;
+            padding: 30px 0 20px 0;
+        }
+    }
+}

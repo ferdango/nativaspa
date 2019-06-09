@@ -1,0 +1,50 @@
+$map-palette-button:(
+  black: (
+    background:			$btn-black,
+    color:          #cacaca,
+    border:         solid 1px $btn-black,
+    hover: (
+      background-color: lighten($btn-black, 35),
+      border: solid 1px lighten($btn-black, 35),
+    )
+  ),
+  white: (
+    background: 	  $btn-white,
+    color:          #050505,
+    border:         solid 1px $btn-black,
+    hover: (
+      background-color: $black,
+      color: $btn-white,
+      border: solid 1px $black,
+    ),
+  ),
+  blue-light: (
+    background: 	  $btn-blue,
+    color:          $white,
+    border:         solid 1px $btn-blue,
+    hover: (
+      background-color: lighten($btn-blue, 5),
+      border: solid 1px lighten($btn-blue, 5),
+    ),
+  ),
+  orange: (
+    background: 	  $btn-orange,
+    color:           $white,
+    border:         solid 1px $btn-orange,
+    hover: (
+      background: 	  darken($btn-orange, 4),
+      color: $white,
+      border: solid 1px darken($btn-orange, 4),
+    ),
+  ),
+);
+
+
+// $palette-button: null !default;
+// $new-palette-buttom: null !default;
+
+// @if map-exist($palette-button){
+//   $new-palette-buttom: map-merge($map-palette-button, $palette-button);
+// } @else {
+//   $new-palette-buttom: $map-palette-button;
+// }

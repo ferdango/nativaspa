@@ -1,0 +1,71 @@
+.mision-vision-container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    @include desde(m){
+        flex-direction: row;
+    }
+
+    .content-box{
+        width: 100%;
+        height: 500px;
+        padding: 120px 7%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include desde(m){
+            width: 50%;
+            //padding: 120px 10%;
+        }
+
+        &__info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 60px 0 30px;
+            flex-direction: column;
+            @include desde(m){
+                flex-direction: row;
+            }
+        }
+
+        .title{
+            margin-right: 30px;
+            font-size: 28px;
+            font-family: $PrimaryBold;
+        }
+        .text{
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        &.mision-wrapper{
+            background: $blue-light;
+            .content-box__info{
+                border-top: 1.5px solid rgba($white , .45);
+                color: $white;
+            }
+        }
+
+        &.vision-wrapper{
+            background: #81bbc6;
+            .content-box__info{
+                border-top: 1.5px solid rgba($blue-dark , .25);
+                color: $blue-dark;
+            }
+        }
+    }
+
+    .image{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        width: 250px;
+        left: calc(50% - 125px);
+        @include desde(m){
+            display: inline-block;
+        }
+    }
+}

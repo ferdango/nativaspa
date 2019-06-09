@@ -1,0 +1,95 @@
+.container-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    height: 70px;
+    padding: 0 5%;
+    @include desde(m){
+        padding: 0;
+    }
+    .box-left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .icon-menu{
+            margin-right: 25px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .container-nav{
+        font-family: $PrimaryBold;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+
+        @include desde(m){
+            display: flex;
+        }
+
+        &__item{
+            text-transform: uppercase;
+            font-size: 14px;
+            color: $black;
+            cursor: default;
+            margin-right:40px;
+            &:last-child(){
+                margin-right:0;
+            }
+        }
+
+        &__link{
+            display: inline-block;
+            padding: 20px 0;
+            position: relative;
+            transition: all .35s ease-in-out;
+            &::before{
+                content: "";
+                width: 0;
+                background: $blue-light;
+                height: 4px;
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                bottom: -5px;
+                transition: all .35s ease-in-out;
+            }
+
+            &:hover{
+                transition: all .35s ease-in-out;
+                color:$blue-light;
+                &::before{
+                    content: "";
+                    width: 100%;
+                    background: $blue-light;
+                    height: 4px;
+                    position: absolute;
+                    display: inline-block;
+                    bottom: -5px;
+                    transition: all .35s ease-in-out;
+                }    
+            }
+        }
+    }
+    .box-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon-social{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 30px;
+            display: none;
+
+            @include desde(s){
+                display: block;
+            }
+        }
+    }
+}

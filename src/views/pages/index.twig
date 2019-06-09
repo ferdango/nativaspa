@@ -1,0 +1,41 @@
+{% extends '../layouts/base.twig' %}
+
+
+{% block title %}Nativa{% endblock %}
+
+{% block content %}
+
+    <section class="aboutus-wrapper">
+        <div class="banner-aboutus-container">
+            <div class="banner-aboutus__image">
+                <img src="https://picsum.photos/1920/1024" />
+            </div>
+            <div class="banner-aboutus__content">
+                Nosotros
+                <strong class="bold">Comprometidos contigo</strong>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="left">
+                <div class="content title">
+                    <strong class="bold">Nativa</strong>
+                    servicio de <br> primera
+                </div>
+            </div>
+            <div class="right">
+                <div class="content paragraph">
+                    <div class="text">Ofrece servicis personalizads de alta calidad  en un ambiente relajante. Hemos diseñado junto a un equipo de profesionales en belleza & estetica tratamientos para revitalizar tu mente y cuerpo.</div>
+                    <div class="text">Ven a nosotros para aliviar el estres y la tension a travez de nuestros masajes, tratamientos faciales y corporales y de cuidado personal. En Nativa Spa cuidamos todos los detalles para ofrecerte una experiencia excepcional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include '../components/mision&vision.twig' %}
+
+    {% include '../components/banner-instalations.twig' %}
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
