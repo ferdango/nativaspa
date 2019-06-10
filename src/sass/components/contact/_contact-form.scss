@@ -1,0 +1,25 @@
+.contact-form-container{
+    width: 100%;
+    padding: 100px 7%;
+    &__header{
+        width: 100%;
+        .title{
+            color: $blue-light;
+            font-size: 32px;
+            font-family: $PrimaryBold;
+            margin-bottom: 15px;
+        }
+
+        .subtitle{
+            color: #717171;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__form{
+        .btn-send-contact{
+            padding: 1rem 4rem;
+        }
+    }
+}

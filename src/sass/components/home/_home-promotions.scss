@@ -19,9 +19,13 @@
     &__item{
         margin-right: 0px;
         min-height: 400px;
-
+        max-width: 240px;
+        max-width: 320px;
+        margin: auto;
         @include desde(s){
+            margin: initial;
             margin-right: 20px;
+            
             &:nth-child(2n+2){
                 margin-right: 0px;
             }
@@ -58,6 +62,11 @@
                 .title{
                     font-size: 32px;
                     font-family: $PrimaryBold;
+                    text-align: center;
+
+                    @include desde(s){
+                        text-align: left;
+                    }
                 }
                 .information-nav{
                     margin: 0 0 20px;

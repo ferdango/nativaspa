@@ -1,0 +1,47 @@
+.contact-banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &-container{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__image{
+        width: 100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 360px;
+        }
+    }
+
+    &__content{
+        max-width: 540px;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: calc(50% - 55px);
+        left: 5%;
+        font-size: 14px;
+        color: $blue-dark;
+
+        @include desde(m){
+            left: 7%;
+            font-size: 18px;
+        }
+
+        .bold{
+            margin-top: 5px;
+            font-size: 28px;
+            @include desde(s){
+                font-size: 32px;
+            }
+            @include desde(m){
+                font-size: 36px;
+            }
+        }
+    }
+}

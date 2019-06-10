@@ -1,0 +1,33 @@
+.transition-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+    .text{
+        max-width: 450px;
+        font-size: 24px;
+        color: $blue-light;
+        text-align: center;
+        .bold{
+            font-family: $PrimaryBold;
+        }
+
+        .last-word{
+            position: relative;
+
+            &::after{
+                content: "";
+                background: $blue-light;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                border-radius: 50%;
+                bottom: 6px;
+                right: 12px;
+            }
+        }
+    }
+}

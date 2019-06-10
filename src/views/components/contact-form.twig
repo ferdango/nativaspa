@@ -1,9 +1,18 @@
-<section class="contact-form-container">
+<section class="contact-form-container container">
     <div class="contact-form-container__header">
         <div class="title">Hablemos</div>
-        <div class="title">Comunicate con nosotros para solicitar con nosotros</div>
+        <div class="subtitle">Comunicate con nosotros para solicitar con nosotros</div>
     </div>    
     <div class="contact-form-container__form">
+
+        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Nombre*:'} } %}
+        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Apellido*:'} } %}
+        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Telefono*:'} } %}
+        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Email*:'} } %}
+        {% include "../atoms/textarea.twig" with { input: {type: 'text', label: 'Mensaje*:'} } %}
+
+        {% include "../atoms/terms-and-conditions.twig" %}
         
+        <div class="btn btn-orange btn-send-contact">Enviar</div>
     </div>
 </section>

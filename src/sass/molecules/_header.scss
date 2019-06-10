@@ -8,7 +8,7 @@
     height: 70px;
     padding: 0 5%;
     @include desde(m){
-        padding: 0;
+        padding: 0 7%;
     }
     .box-left{
         display: flex;

@@ -1,0 +1,45 @@
+.input-material{
+  position: relative;
+  margin-bottom: 30px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  input{
+    height: 55px;
+    width: 100%;
+    border: 1.5px solid #DEDCDE;
+    border-radius: 3px;
+    &:focus{
+      border-color: rgba($blue-dark, .65);
+    }
+  }
+
+  textarea{
+    width: 100%;
+    min-height: 150px;
+    border: 1.5px solid #DEDCDE;
+    border-radius: 3px;
+    &:focus{
+      border-color: rgba($blue-dark, .65);
+    }
+  }
+
+  label{
+    color: $blue-dark;
+    font-size: 14px;
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    pointer-events: none;
+    font-family: $PrimarySemi;
+    margin-bottom: 20px;
+  }
+
+  .description-footer{
+    color: $blue-dark;
+    font-size: 12px;
+    line-height: 5;
+    width: 100%;
+    font-family: $PrimarySemi;
+  }
+}
