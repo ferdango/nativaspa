@@ -1,0 +1,19 @@
+.treatments-container{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    &__item{
+        padding: 30px;
+        background: $blue-light;
+        margin: 0 2.5px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__content{
+
+        }
+    }
+}

@@ -16,6 +16,9 @@
         {% include '../common/footer.twig' %}
     </div>
 
-    {% block scripts %}{% endblock %}
+    {% block scripts %}
+        <script type="text/javascript" src="{{ assets('js/jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ assets('js/app.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
