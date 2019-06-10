@@ -1,0 +1,56 @@
+.my-promotions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 7%;
+
+        .title{
+            font-size: 36px;
+            color: $blue-dark;
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            .bold{
+                font-family: $PrimaryBold;
+                margin-right: 7px;
+            }
+
+            .last-word{
+                position: relative;
+                &::before{
+                    content: "";
+                    background: $blue-light;
+                    position: absolute;
+                    right: calc(50% - 165px);
+                    bottom: 10px;
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .subtitle{
+            text-align: center;
+            max-width: 768px;
+            margin: auto;
+        }
+    }
+
+    &__body{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .promotion-card{
+            cursor: pointer;
+        }
+    }
+}
