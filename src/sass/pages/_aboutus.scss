@@ -37,12 +37,12 @@
 
             .bold{
                 margin-top: 5px;
-                font-size: 32px;
+                font-size: 28px;
                 @include desde(s){
-                    font-size: 36px;
+                    font-size: 32px;
                 }
                 @include desde(m){
-                    font-size: 40px;
+                    font-size: 36px;
                 }
             }
         }
@@ -60,6 +60,10 @@
 
         @include desde(s){
             flex-direction: row;
+        }
+
+        @include desde(m){
+            padding: 0 5%;
         }
 
         .left, .right{
@@ -88,24 +92,27 @@
                     font-size: 45px;
                     width: 70%;
                     justify-content: flex-start;
-                    position: relative;
-                    //margin-top: 0;
-
-                    &::after{
-                        content: "";
-                        background: $blue-light;
-                        display: inline-block;
-                        width: 10px;
-                        height: 10px;
-                        position: absolute;
-                        border-radius: 50%;
-                        bottom: 12px;
-                        right: 46%;
-                    }
 
                     .bold{
                         font-family: $PrimaryBold;
                         font-size: 50px;
+                    }
+
+                    .last-word{
+                        position: relative;
+                        //margin-top: 0;
+
+                        &::after{
+                            content: "";
+                            background: $blue-light;
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            border-radius: 50%;
+                            bottom: 12px;
+                            right: -15px;
+                        }
                     }
                 }
         

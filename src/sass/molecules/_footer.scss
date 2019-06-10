@@ -15,10 +15,7 @@
             grid-template-columns: 1fr; 
             
             @include desde(s){
-                grid-template-columns: 1fr 1fr; 
-            }
-            @include desde(m){
-                grid-template-columns: 1fr 1fr 1fr 1fr; 
+                grid-template-columns: minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px); 
             }
 
             .footer-nav-section{
@@ -30,20 +27,26 @@
                 justify-content: flex-start;
 
                 @include desde(s){
-                    width: 25%;
+                    //width: 25%;
                     max-width: 400px;
                     align-items: flex-start;
                 }
 
+                @include desde(m){
+                    //width: 25%;
+                    max-width: 200px;
+                    //align-items: flex-start;
+                }
+
                 &:last-child{
                     width: auto;
-                    align-items: center;
+                    //align-items: center;
                 }
 
                 .title{
                     text-transform: uppercase;
                     font-family: $PrimaryBold;
-                    font-size: 18px;
+                    font-size: 16px;
                     color: $blue-light;
                 }
 
@@ -53,7 +56,7 @@
                     flex-direction: column;
 
                     &__item{
-                        font-size: 15px;
+                        font-size: 14px;
                         color: #aaaaaa;
                         font-family: $PrimarySemi;
                         padding: 10px 0;

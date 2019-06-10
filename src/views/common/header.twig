@@ -1,59 +1,71 @@
 <header class="container-header">
     <div class="box-left"><img class="icon-menu" src="../assets/img/menu-three-horizontal-lines-symbol.svg" /><a href="./home.html"><img class="brand" src="./home.html" /></a></div>
-    <div class="box-center">
-        <div class="container-nav">
-            <li class="container-nav__item">
-                <a class="container-nav__link" href="./index.html">Nosotros</a>
-            </li>
-            <li class="container-nav__item">
-                <a class="container-nav__link">Servicios</a>
-                <div class="megamenu-container">
-                    <ul class="tabs-nav">
-                        <li class="tabs-nav__item">
-                            <img class="icon" src="#" />
-                            <div class="text">Tratamientos faciales</div>
-                            <img class="icon-arrow" src="#" />
-                        </li>
-                        <li class="tabs-nav__item">
-                            <img class="icon" src="#" />
-                            <div class="text">Tratamientos faciales</div>
-                            <img class="icon-arrow" src="#" />
-                        </li>
-                        <li class="tabs-nav__item">
-                            <img class="icon" src="#" />
-                            <div class="text">Tratamientos faciales</div>
-                            <img class="icon-arrow" src="#" />
-                        </li>
-                        <li class="tabs-nav__item">
-                            <img class="icon" src="#" />
-                            <div class="text">Tratamientos faciales</div>
-                            <img class="icon-arrow" src="#" />
-                        </li>
-                    </ul>
-                    
-                    <div class="content-wrapper">
-                        <ul class="nav-content">
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                            <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
-                        </ul>
-
-                        <div class=""><img class="" src="#" /></div>
-                    </div>
-                </div>    
-            </li>
-            <li class="container-nav__item"><a class="container-nav__link">Programas</a></li>
-        </div>
-    </div>
+    
     <div class="box-right">
+        <div class="box-center">
+            <div class="container-nav">
+                <li class="container-nav__item">
+                    <a class="container-nav__link" href="./index.html">Nosotros</a>
+                </li>
+                <li class="container-nav__item">
+                    <a class="container-nav__link">Servicios</a>
+                    <div class="megamenu-container">
+                        <ul class="tabs-nav">
+                            <li class="tabs-nav__item">
+                                <img class="icon" src="#" />
+                                <div class="text">Tratamientos faciales</div>
+                                <img class="icon-arrow" src="#" />
+                            </li>
+                            <li class="tabs-nav__item">
+                                <img class="icon" src="#" />
+                                <div class="text">Tratamientos faciales</div>
+                                <img class="icon-arrow" src="#" />
+                            </li>
+                            <li class="tabs-nav__item">
+                                <img class="icon" src="#" />
+                                <div class="text">Tratamientos faciales</div>
+                                <img class="icon-arrow" src="#" />
+                            </li>
+                            <li class="tabs-nav__item">
+                                <img class="icon" src="#" />
+                                <div class="text">Tratamientos faciales</div>
+                                <img class="icon-arrow" src="#" />
+                            </li>
+                        </ul>
+                        
+                        <div class="content-wrapper">
+                            <ul class="nav-content">
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                                <li class="nav-content__item"><a class="nav-content__link">Tratamiento para piel seca</a></li>
+                            </ul>
+
+                            <div class=""><img class="" src="#" /></div>
+                        </div>
+                    </div>    
+                </li>
+                <li class="container-nav__item">
+                    <a class="container-nav__link">Programas</a>
+                    <div class="megamenu-container">
+                        <div class="megamenu-container__content">
+                            {% include '../components/promotion-card.twig' %}
+                            {% include '../components/promotion-card.twig' %}
+                            {% include '../components/promotion-card.twig' %}
+                            {% include '../components/promotion-card.twig' %}
+                        </div>
+                        <div class="megamenu-container__action"><a class="btn btn-blue-light" href="./programs.html">Ver promociones</a></div>
+                    </div>
+                </li>
+            </div>
+        </div>
         <img class="icon-social" src="../assets/img/facebook-letter-logo-1.svg" /></span>
         <img class="icon-social" src="../assets/img/instagram-logo-1.svg" /></span>
         <img class="icon-social" src="../assets/img/youtube.svg" /></span>
-        <a class="btn btn-orange" href="./contact.html">Contacto</a>
+        <a class="btn btn-orange btn-contact" href="./contact.html">Contacto</a>
     </div>
 </header>
