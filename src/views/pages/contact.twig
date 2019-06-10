@@ -1,0 +1,33 @@
+{% extends '../layouts/base.twig' %}
+
+
+{% block title %}Nativa{% endblock %}
+
+{% block content %}
+
+    <section class="banner-home">
+        <div class="banner-home-container">
+            <div class="banner-home__image">
+                <img src="https://picsum.photos/1920/1024" />
+            </div>
+            <div class="banner-home__content">
+                Contacto
+                <strong class="bold">Comunicate con<br>nosotros</strong>
+            </div>
+        </div>  
+    </section>
+
+    <div class="transition-wrapper">
+        <div class="text">
+            <strong class="bold">Estamos para atenderte</strong>
+            visita nuestras<div class="last-word">sedes</div>
+        </div>
+    </div>
+
+    {% include '../components/contact-map.twig' %}
+
+    {% include '../components/contact-form.twig' %}
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
