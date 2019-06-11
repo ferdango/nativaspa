@@ -7,8 +7,11 @@
     margin: auto;
     height: 70px;
     padding: 0 5%;
+    position: fixed;
+    background: $white;
     @include desde(m){
         padding: 0 7%;
+        //position: relative;
     }
     .box-left{
         display: flex;
@@ -18,7 +21,7 @@
         .icon-menu{
             margin-right: 25px;
             width: 20px;
-            height: 20px;
+            height: 15px;
             display: block;
 
             @include desde(s){
@@ -31,11 +34,23 @@
         font-family: $PrimaryBold;
         justify-content: space-around;
         align-items: center;
-        display: none;
-        margin-right: 35px;
+        display: flex;
+        z-index: 10;
+        top: 100px;
+        background: rebeccapurple;
+        top: 70px;
+        left: 0;
+        height: calc(100vh - 70px);
+        position: fixed;
+        width: 100%;
+        max-width: 300px;
 
         @include desde(m){
-            display: flex;
+            position: relative;
+            margin-right: 35px;
+            top: 0px;
+            height: auto;
+            left: initial;
         }
 
         &__item{

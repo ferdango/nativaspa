@@ -7,7 +7,11 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 50px 7%;
+        padding: 80px 7%;
+
+        @include desde(m){
+            padding: 50px 7%;
+        }
 
         .title{
             font-size: 36px;
@@ -16,6 +20,12 @@
             margin-bottom: 30px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
+
+            @include desde(s){
+                flex-direction: row;
+            }
+
             .bold{
                 font-family: $PrimaryBold;
                 margin-right: 7px;
@@ -47,10 +57,21 @@
     &__body{
         display: grid;
         width: 100%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        max-width: 1024px;
+        padding: 0 5%;
         .promotion-card{
             cursor: pointer;
+            max-width: 100%;
+        }
+        
+        @include desde(s){
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desde(m){
+            padding: 0;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 }
