@@ -19,7 +19,7 @@
 
     &:hover{
         transition: all .35s ease-in-out;
-        &.active{
+        .treatment-card__content{
             top: calc(50% - 130px);
         }
         .description{

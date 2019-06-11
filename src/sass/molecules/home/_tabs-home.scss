@@ -1,0 +1,89 @@
+.tabs-home-container{
+    width: 100%;
+    padding: 80px 7%;
+    position: relative;
+    &__image{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &__header{
+        width: 100%;
+        margin-bottom: 50px;
+        .title{
+            color: $blue-dark;
+            font-size: 28px;
+            font-family: $PrimaryBold;
+            padding: 40px 20px;
+        }
+    }
+
+    &__body{
+        width: 100%;
+        max-width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .tabs{
+            &-box{
+                display: flex;
+                flex-direction: column;
+                border-right: 1.25px solid rgba($blue-dark ,.1);
+                
+                &__item{
+                    cursor: pointer;
+                    padding: 20px 100px 20px 60px;
+                    font-size: 20px;
+                    max-width: 85%;
+                    line-height: 1.35;
+                    color: rgba($blue-dark, .35);
+                    border-bottom: 1px solid rgba($blue-dark ,.1);
+                    height: 95px;
+    
+                    &:last-child{
+                        border-bottom: none;
+                    }
+    
+                    &.active{
+                        color: $blue-dark;
+                       }
+                }
+            }
+
+            &-content{
+                padding: 20px 15%;
+                /*display: flex;
+                flex-direction: column;
+                align-items: flex-start;*/
+
+                .content{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+
+                    .icon{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .title{
+                        color: $blue-light;
+                        font-family: $PrimaryBold;
+                        font-size: 22px;
+                        margin: 30px 0;
+                    }
+
+                    .paragraph{
+                        color: $blue-dark;
+                        font-size: 16px;
+                        font-family: $PrimarySemi;
+                        line-height: 1.7;
+                        margin-bottom: 30px;
+                    }
+
+                }
+            }
+        }
+       
+    }
+}

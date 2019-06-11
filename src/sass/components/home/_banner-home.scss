@@ -20,6 +20,7 @@
             }
             @include desde(m){
                 height: auto;
+                max-height: 640px;
             }
         }
     }
