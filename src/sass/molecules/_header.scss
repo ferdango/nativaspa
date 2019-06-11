@@ -45,6 +45,7 @@
         position: fixed;
         width: 100%;
         max-width: 300px;
+        //transform: translateX(-100%);
 
         @include desde(m){
             position: relative;
@@ -52,6 +53,7 @@
             top: 0px;
             height: auto;
             left: initial;
+            //transform: translateX(0);
         }
 
         &__item{

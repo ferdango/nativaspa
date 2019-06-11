@@ -1,0 +1,66 @@
+{% extends '../layouts/base.twig' %}
+
+
+{% block title %}Nativa{% endblock %}
+
+{% block content %}
+
+    <section class="banner-home">
+        <div class="banner-home-container">
+            <div class="banner-home__image">
+                <img src="https://picsum.photos/1920/1024" />
+            </div>
+            <div class="banner-home__content">
+                Servicios
+               <strong class="bold">Trratamientos Corporales</strong>
+            </div>
+            <div class="banner-home__info-footer">
+                <div class="banner-home__info-footer__item">
+                    <div class="title">Sientase seguro</div>
+                    <div class="subtitle">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="banner-home__info-footer__item">
+                    <div class="title">Tecnologia Especializada</div>
+                    <div class="subtitle">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="banner-home__info-footer__item">
+                    <div class="title">Convenios con Compañias</div>
+                    <div class="subtitle">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="banner-home__info-footer__item">
+                    <div class="title">Mejor atencion medica</div>
+                    <div class="subtitle">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    {% include '../common/breadcums.twig' %}
+
+    <section class="general-treatments container">
+        <div class="general-treatments__image"><img class="" src="https://picsum.photos/1920/1024" /></div>
+    
+        <div class="general-treatments__information">
+            <div="general-treatments__information__header">
+                <strong>Relajate &</strong>Disfruta
+            </div>
+
+            <div class="general-treatments__information__body">
+                <div class="paragraph">Hemos unido por primera el poder de equipos medicos remodelantes de
+                ultima generacion con una amplia linea cosmetica corporal que se convertiran en tus compañeros ideales para conseguir la silueta perfecta</div>
+                <div class="paragraph">Hemos unido por primera el poder de equipos medicos remodelantes de
+                ultima generacion con una amplia linea cosmetica corporal que se convertiran en tus compañeros ideales para conseguir la silueta perfecta</div>
+                <div class="paragraph">Hemos unido por primera el poder de equipos medicos remodelantes de
+                ultima generacion con una amplia linea cosmetica corporal que se convertiran en tus compañeros ideales para conseguir la silueta perfecta</div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    {% include '../components/transition-services-reserv.twig' %}
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
