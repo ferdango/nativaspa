@@ -1,0 +1,61 @@
+{% extends '../layouts/base.twig' %}
+
+
+{% block title %}Nativa{% endblock %}
+
+{% block content %}
+
+    <div class="only-promotion">
+        <div class="only-promotion__section-breadcum container">
+            {% include '../common/breadcums.twig' %}
+        </div>
+    
+        <section class="only-promotion__main container">
+            <div class="only-promotion__main__header">
+                <div class="title">Tratamientos Faciales</div>
+                <div class="subtitle">Limpieza, exfoleacion & hidratacion corporal</div>
+            </div>
+
+            <div class="only-promotion__main__content">
+                <div class="slider-banner"></div>
+
+                <div class="promotion-description">
+                    <div class="promotion-description__price">
+                        <div class="small">Desde:</div>
+                        <div class="price actual">S/179</div>
+                        <div class="price before">Antes S/220.00</div>
+                    </div>
+
+                    <div class="promotion-description__description">
+                        El programa incluye
+
+                        <ul class="promotion-description__description__menu">
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                            <li class="promotion-description__description__menu__item">Zonas: Abdomen, cintura, espalda alto o espalda baja.</li>
+                        </ul>
+                    </div>
+
+                    <a class="btn btn-orange btn-reservar">Reservar ahora</a>
+                </div>
+            </div>
+        </section>
+    
+        {% include '../molecules/tabs-only-promotion.twig' %}
+    </div>
+
+    <div class="modal modal-contact-us">
+        <div class="modal-header">
+            <div class="close-box"><img class="" src="./assetes/img/close.svg" /></div>
+        </div>
+        <div class="modal-body">
+            {% include '../components/contact-form.twig' %}
+        </div>
+    </div>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}

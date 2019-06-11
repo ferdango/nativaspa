@@ -11,26 +11,4 @@
     @include desde(m){
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    &__item{
-        padding: 30px;
-        background: $blue-light;
-        margin-bottom: 5px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include desde(s){
-            margin: 0 2.5px 5px;
-        }
-
-        @include desde(m){
-            margin: 0 2.5px 5px;
-        }
-
-        &__content{
-
-        }
-    }
 }

@@ -9,9 +9,10 @@
     padding: 0 5%;
     position: fixed;
     background: $white;
+    z-index: 10;
     @include desde(m){
         padding: 0 7%;
-        //position: relative;
+        position: relative;
     }
     .box-left{
         display: flex;
