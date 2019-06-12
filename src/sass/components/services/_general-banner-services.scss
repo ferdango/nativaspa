@@ -1,0 +1,61 @@
+.general-treatments{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    align-items: center;
+
+    &__image{
+        height: 100%;
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__information{
+        width: 100%;
+        padding: 60px 0;
+
+        &__header{
+            color: $blue-light;
+            font-size: 36px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+
+            .bold{
+                font-family: $PrimaryBold;
+            }
+
+            .last-word{
+                position: relative;
+                &::after{
+                    content: "";
+                    background: $blue-light;
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    position: absolute;
+                    border-radius: 50%;
+                    bottom: 7px;
+                    //right: 0;
+                }
+            }
+        }
+
+        &__body{
+            color: $blue-dark;
+            line-height: 1.8;
+
+            .paragraph{
+                margin-bottom: 15px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
