@@ -1,22 +1,38 @@
 .general-treatments{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    padding: 0 7%;
+
+    @include desde(m){
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        align-items: center;
+    }
 
     &__image{
         height: 100%;
-
+        order: 2;
+        @include desde(m){
+            order: 1;
+        }
         img{
-            height: 100%;
+            height: auto;
             object-fit: cover;
+
+            @include desde(m){
+                height: 100%;
+            }
         }
     }
 
     &__information{
         width: 100%;
         padding: 60px 0;
+        order: 1;
+        @include desde(m){
+            order: 2;
+        }
 
         &__header{
             color: $blue-light;

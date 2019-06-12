@@ -1,0 +1,15 @@
+.service-treatments-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    @include desde(s){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desde(m){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

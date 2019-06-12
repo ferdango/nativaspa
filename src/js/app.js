@@ -12,3 +12,8 @@ $(".my-promotions-container__body__item").click(function(){
 $(".btn-reservar").click(function(){
     $(".modal-contact-us").addClass("active");
 })
+
+//service treatment card 
+$(".treatment-service-card").click(function(){
+    window.location.href = 'detail-treatment.html';
+})
