@@ -17,3 +17,8 @@ $(".btn-reservar").click(function(){
 $(".treatment-service-card").click(function(){
     window.location.href = 'detail-treatment.html';
 })
+
+//detail treatment
+$(".our-procedures__slider__item").click(function(){
+    window.location.href = 'detail-sub-treatment.html';
+})

@@ -1,0 +1,78 @@
+.general-tabs{
+    width: 100%;
+
+    &__header{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 2px solid rgba(#505050, .45);
+        .tab{
+            color: #505050;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding-bottom: 30px;
+            margin-right: 20px;
+            font-family: $PrimaryBold;
+            cursor: pointer;
+            transition: all .35s ease-in-out;
+            position: relative;
+            
+            &.active{
+                transition: all .35s ease-in-out;
+                color: $orange;
+
+                &::before{
+                    background: $orange;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                transition: all .35s ease-in-out;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: transparent;
+                display: block;
+                bottom: 0;
+                z-index: 10;
+            }
+
+            &:hover{
+                transition: all .35s ease-in-out;
+                color: $orange;
+
+                &::before{
+                    background: $orange;
+                }
+            }
+        }
+    }
+
+
+    &__body{
+        padding-top: 40px;
+        padding-bottom: 20px;
+        
+        .content{
+            color: $blue-dark;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+
+            .title{
+                font-family: $PrimaryBold;
+                font-size: 18px;
+                line-height: 1.35;
+                margin-bottom: 30px;
+            }
+
+            .paragraph{
+                font-size: 14px;
+                line-height: 1.45;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

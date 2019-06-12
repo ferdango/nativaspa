@@ -1,0 +1,25 @@
+.detail-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 50px 5%;
+    align-items: flex-start;
+
+    @include desde(s){
+        grid-template-columns: minmax(40% , 40%) minmax(60% , 60%); 
+        padding: 50px 7%;
+    }
+
+    .price-box-container{
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+
+        @include desde(s){
+            width: 90%;
+            max-width: initial;
+            margin-bottom: 0px;
+        }
+    }
+    
+}   

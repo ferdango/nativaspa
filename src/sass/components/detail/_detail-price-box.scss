@@ -1,0 +1,55 @@
+.price-box-container{
+    width: 90%;
+    background: #c7cdff;
+    padding: 60px 35px;;
+    color: $blue-dark;
+    max-width: 320px;
+
+    @include desde(m){
+        padding: 30px;
+    }
+
+    &__header{
+        font-family: $PrimaryBold;
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__body{
+        width: 100%;
+        border-bottom: 1.5px solid rgba($white, .45);
+        padding-bottom: 25px;
+        .description-menu{
+            &__item{
+                padding: 7px 0;
+                padding-left: 25px;
+                font-family: $PrimarySemi;
+                 font-size: 14px;
+            }
+        }
+
+        .description-text{
+            font-size: 12px;
+            line-height: 1.35;
+        }
+    }
+
+    &__footer{
+        font-family: $PrimarySemi;
+        padding: 25px 0;
+        .bold{
+            font-family: $PrimaryBold;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        .before{
+            font-size: 12px;
+        }
+
+        .btn-reserv{
+            margin-top: 25px;
+        }
+    }
+}
