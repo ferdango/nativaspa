@@ -10,6 +10,7 @@
     position: fixed;
     background: $white;
     z-index: 10;
+    top: 0;
     @include desde(m){
         padding: 0 7%;
         position: relative;
@@ -35,7 +36,7 @@
         font-family: $PrimaryBold;
         justify-content: space-around;
         align-items: center;
-        display: none;
+        display: flex;
         z-index: 10;
         top: 100px;
         background: rebeccapurple;
@@ -45,15 +46,18 @@
         position: fixed;
         width: 100%;
         max-width: 300px;
-        //transform: translateX(-100%);
-
+        transform: translateX(-100%);
+        @include desde(s){
+            //transform: none;
+        }
         @include desde(m){
             position: relative;
             margin-right: 35px;
             top: 0px;
             height: auto;
             left: initial;
-            //transform: translateX(0);
+            display: flex;
+            transform: none;
         }
 
         &__item{

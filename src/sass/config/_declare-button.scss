@@ -10,12 +10,12 @@ $map-palette-button:(
   ),
   white: (
     background: 	  $btn-white,
-    color:          #050505,
-    border:         solid 1px $btn-black,
+    color:          $blue-light,
+    border:         solid 1px $white,
     hover: (
-      background-color: $black,
-      color: $btn-white,
-      border: solid 1px $black,
+      background-color: darken($white , 4),
+      color: $blue-light,
+      border: solid 1px darken($white , 4),
     ),
   ),
   blue-light: (

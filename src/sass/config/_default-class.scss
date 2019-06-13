@@ -5,8 +5,23 @@ body {
   font-size: 16px;
   font-family: $PrimaryRegular;
   position: relative;
+  padding-top: 70px;
+  @include desde(m){
+    padding-top: 0px;
+  }
+
   &.active{
     overflow: hidden;
+  }
+
+  &.body-home{
+    padding-top: 0px;
+
+    .container-header{
+      position: absolute;
+      top: 0;
+      background: transparent;
+    }
   }
 }
 //Contenedor de rows con width maximo, sin grid

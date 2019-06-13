@@ -1,0 +1,57 @@
+.sub-treatment{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    padding: 50px 5%;
+    grid-column-gap: 100px;
+
+    @include desde(s){
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 7%;
+        padding-right: 0;
+    }
+
+    &__detail{
+        width: 100%;
+        //padding:  0 7%;
+        
+        .header{
+            font-size: 18px;
+            color: $blue-dark;
+            line-height: 1.5;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+            .bold{
+                font-family: $PrimaryBold;
+                position: relative;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__image{
+        position: relative;
+        object-fit: cover;
+        display: none;
+
+        @include desde(s){
+            display: block;
+        }
+        img{    
+            //position: absolute;
+            height: 100%;
+        }
+    }
+
+    .btn-reserv{
+        margin-top: 15px;
+        max-width: 100%;
+
+        @include desde(s){
+            max-width: 180px;
+        }
+    }
+}

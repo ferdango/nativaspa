@@ -2,8 +2,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 7%;
+    padding: 0 5%;
 
+    @include desde(s){
+        padding: 0 7%;
+    }
     @include desde(m){
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 10px;

@@ -10,12 +10,12 @@
 
     &__slider{
         width: 100%;
-        display: flex;
+        /*display: flex;
         flex-direction: column;
 
         @include desde(m){
             flex-direction: row;
-        }
+        }*/
 
         &__item{
             width: 240px;

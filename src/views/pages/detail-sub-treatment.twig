@@ -1,0 +1,30 @@
+{% extends '../layouts/base.twig' %}
+
+
+{% block title %}Nativa{% endblock %}
+
+{% block content %}
+    <div class="breadcums-container blue-light">
+        {% include '../common/breadcums.twig' %}
+    </div>
+
+    <section class="sub-treatment container">
+        <div class="sub-treatment__detail">
+            <div class="header">
+                Tratamientos corporales
+                <strong class="bold">Readiofrecuencia tripolar</strong>
+            </div>
+            <div class="sub-treatment__tabs-box">
+                {% include '../molecules/general-tabs.twig' %}
+
+                
+            </div>
+        </div>
+        <div class="sub-treatment__image"><img src="https://picsum.photos/1920/1080" /></div>
+        <div class="btn btn-orange btn-reserv">Reservar cita</div>
+    </section>
+        
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}

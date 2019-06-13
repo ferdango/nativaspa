@@ -1,44 +1,76 @@
 .tabs-home-container{
     width: 100%;
-    padding: 80px 7%;
+    padding: 20px 7%;
     position: relative;
+
+    @include desde(m){
+        padding: 80px 7%;
+    }
     &__image{
         position: absolute;
         right: 0;
         bottom: 0;
+        display: none;
+
+        @include desde(m){
+            display: block;
+        }
     }
     &__header{
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
+        @include desde(m){
+            margin-bottom: 50px;
+        }
         .title{
             color: $blue-dark;
             font-size: 28px;
             font-family: $PrimaryBold;
-            padding: 40px 20px;
+            padding: 20px 0px;
         }
     }
 
     &__body{
         width: 100%;
-        max-width: 70%;
+        max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        @include desde(m){
+            max-width: 70%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
 
         .tabs{
             &-box{
                 display: flex;
                 flex-direction: column;
-                border-right: 1.25px solid rgba($blue-dark ,.1);
+                border-right: none;
                 
+                @include desde(m){
+                    //padding: 20px 15%;
+                    border-right: 1.25px solid rgba($blue-dark ,.1);
+                }
+
                 &__item{
                     cursor: pointer;
-                    padding: 20px 100px 20px 60px;
-                    font-size: 20px;
-                    max-width: 85%;
+                    padding: 20px 0;
+                    font-size: 18px;
+                    max-width: 100%;
                     line-height: 1.35;
                     color: rgba($blue-dark, .35);
                     border-bottom: 1px solid rgba($blue-dark ,.1);
-                    height: 95px;
+                    height: auto;
+                    transition: all .35s ease-out;
+
+                    @include desde(m){
+                        max-width: 85%;
+                        padding: 20px 100px 20px 60px;
+                        height: 95px;
+                        font-size: 20px;
+                    }
     
                     &:last-child{
                         border-bottom: none;
@@ -46,15 +78,24 @@
     
                     &.active{
                         color: $blue-dark;
-                       }
+                    }
+
+                    &:hover{
+                        transition: all .35s ease-out;
+                        color: $blue-dark;
+                    }
                 }
             }
 
             &-content{
-                padding: 20px 15%;
+                padding: 20px 0;
                 /*display: flex;
                 flex-direction: column;
                 align-items: flex-start;*/
+
+                @include desde(m){
+                    padding: 20px 15%;
+                }
 
                 .content{
                     display: none;
