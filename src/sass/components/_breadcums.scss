@@ -1,0 +1,27 @@
+.breadcums{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba($blue-dark, .35);
+    font-size: 16px;
+    font-family: $PrimarySemi;
+
+    .link{
+        cursor: pointer;
+        &:last-child{
+            color: $blue-dark;
+        }
+    }
+
+    .icon{
+        background: #1c1c1c;
+        width: 10px;
+        height: 10px;
+        margin: 0 15px;
+    }
+
+    &-container{
+        padding: 40px 5%;
+    }
+}
