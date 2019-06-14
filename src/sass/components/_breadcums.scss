@@ -1,6 +1,7 @@
 .breadcums{
     width: 100%;
     display: flex;
+    max-width: 1400px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -8,11 +9,16 @@
     font-family: $PrimarySemi;
     font-size: 14px;
     letter-spacing: 0.45px;
+    padding: 0 5%;
      @include desde(xs){
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         font-size: 12px;
+     }
+
+     @include desde(m){
+        padding: 0 7%;
      }
 
     .link{

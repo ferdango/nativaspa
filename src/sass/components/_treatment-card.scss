@@ -39,7 +39,13 @@
         position: absolute;
         width:100%;
         padding: 0 7%;
-        top: calc(50% - 27px);
+        top: calc(50% - 62px);
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
 
         .title{
             display: flex;

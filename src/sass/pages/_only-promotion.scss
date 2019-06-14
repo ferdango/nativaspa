@@ -7,9 +7,22 @@
         padding: 20px 0;
     }
 
+    &__tabs{
+        width: 100%;
+        padding: 0 5%;
+        @include desde(m){
+            padding: 0 7%;
+        }
+    }
+
     &__main{
         width: 100%;
-        padding: 0 7%;
+        padding: 0 5%;
+        margin-bottom: 50px;
+        @include desde(m){
+            margin-bottom: 100px;
+            padding: 0 7%;
+        }
 
         &__header{
             display: flex;
@@ -46,6 +59,7 @@
 
             @include desde(m){
                 grid-template-columns: 65% 35%;
+                grid-template-rows: 1fr;
             }
 
             .slider-banner{
