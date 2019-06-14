@@ -41,7 +41,12 @@
 
         &__content{
             display: grid;
-            grid-template-columns: 65% 35%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            @include desde(m){
+                grid-template-columns: 65% 35%;
+            }
 
             .slider-banner{
                 width: 100%;
@@ -49,7 +54,10 @@
             }
 
             .promotion-description{
-                padding: 30px 12%;
+                padding: 40px 0;
+                @include desde(m){
+                    padding: 30px 12%;
+                }
                 &__price{
                     width: 100%;
                     color: $blue-light;

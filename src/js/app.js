@@ -26,7 +26,7 @@ $(".our-procedures__slider__item").click(function(){
 })
 
 const our_procedures_slider = tns({
-    container: '.our-procedures__slider',
+    container: document.querySelector('.our-procedures__slider'),
     items: 3,
     axis: 'horizontal',
     autoplay: true,
@@ -52,4 +52,50 @@ const our_procedures_slider = tns({
         items: 3
       }
     }
+});
+/*
+const instalations__banner = tns({
+  container: $(".banner-instalations__banner"),
+  nav: false,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  gutter: 20,
+  controls: false,
+  responsive: {
+    640: {
+        items: 2
+    },
+    768: {
+        items: 3
+    }
+  }
+});*/
+
+const slider = tns({
+  container: document.querySelector(".banner-instalations__banner"),
+  nav: false,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  gutter: 20,
+  controls: false,
+  responsive: {
+    640: {
+        items: 2
+    },
+    768: {
+        items: 3
+    }
+  }
+});
+
+
+
+document.querySelector(".next").onclick = (() => {
+  slider.goTo("next");
+})
+
+document.querySelector(".prev").onclick = (() => {
+  slider.goTo("prev");
 });

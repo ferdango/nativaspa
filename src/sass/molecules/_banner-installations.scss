@@ -67,10 +67,13 @@
                 transition: all .35s ease-in-out;
                 color: $orange;
                 font-family: $PrimaryBold;
-                padding: 20px 0;
+                padding: 5px 0;
+                margin-bottom: 30px;
+                cursor: pointer;
 
                 @include desde(s){
                     padding: 0;
+                    margin-bottom: 0;
                 }
 
                 &::before{
@@ -81,8 +84,14 @@
                     position: absolute;
                     display: inline-block;
                     left: 0;
-                    bottom: -15px;
+                    bottom: -3PX;
                     transition: all .35s ease-in-out;
+                    @include desde(s){
+                        bottom: -5px;
+                    }
+                    @include desde(m){
+                        bottom: -15px;
+                    }
                 }
 
                 &:hover{
@@ -95,8 +104,15 @@
                         height: 4px;
                         position: absolute;
                         display: inline-block;
-                        bottom: -15px;
+                        bottom: -3PX;
                         transition: all .35s ease-in-out;
+
+                        @include desde(s){
+                            bottom: -5px;
+                        }
+                        @include desde(m){
+                            bottom: -15px;
+                        }
                     }    
                 }
             }

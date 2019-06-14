@@ -69,13 +69,14 @@
         .left, .right{
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height: auto;
 
             @include desde(m){
                 width: 50%;
                 height: 450px;
+                justify-content: center;
             }
 
             .content{
@@ -85,8 +86,12 @@
                 align-items: flex-start;
                 margin: auto;
                 max-width: 100%;
-                margin: 30px;
+                margin: 30px 0;
                 color: $blue-light;
+
+                @include desde(s){
+                    margin: 30px;
+                }
 
                 &.title{
                     font-size: 45px;
@@ -119,8 +124,13 @@
                 .text{
                     margin-bottom: 25px;
                     font-size: 16px;
-                    line-height: 1.35;
+                    line-height: 1.75;
                     color: $blue-dark;
+
+                    @include desde(s){
+                        line-height: 1.4;
+                    }
+
                     &:last-child{
                         margin-bottom: 0;
                     }
