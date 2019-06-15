@@ -1,4 +1,4 @@
-.banner-home{
+    .banner-home{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -99,18 +99,22 @@
         margin-right:auto;
         left:0;
         right:0;
-        padding: 0 7%;
+        padding: 0 5%;
+        @include desde(m){
+            padding: 0 7%;
+        }
         &__item{
-            padding: 15px 15px;
-            border-top: 2px solid rgba($white, .35);
+            padding: 15px 7px;
+            border-top: 5px solid rgba($white, .7);
             color: $white;
             font-family: $PrimarySemi;
             cursor: pointer;
             margin-right: 0;
             width: 100%;
             @include desde(s){
-                margin-right: 50px;
+                //margin-right: 50px;
                 padding: 25px 15px;
+                border-top: 2.5px solid rgba($white, .35);
             }
 
             &:last-child{
