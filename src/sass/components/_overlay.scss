@@ -1,0 +1,49 @@
+.overlay, .overlay_fullview{
+    position: fixed;
+    background-color: rgba(40, 53, 72, 0.35);
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    &.active{
+      z-index: 100;
+      opacity: 1;
+      top: 0;
+    }
+    &.active-item{
+      z-index:49;
+      opacity: 1;
+      top: 0;
+    }
+    &.overlay-cart-sidebar{
+      top: 0;
+      left: -100%;
+      transition: opacity .15s ease-in-out;
+      opacity: 0;
+      &.active{
+        z-index: 300;
+        opacity: 1;
+        left: 0;
+      }
+    }
+    &.overlay-menu-movil{
+      top: 0;
+      left: -100%;
+      transition: opacity .15s ease-in-out;
+      opacity: 0;
+      &.active{
+        z-index: 300;
+        opacity: 1;
+        left: 0;
+      }
+    }
+    &.overlay-menu{
+      &.active{
+        z-index: 100;
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }

@@ -1,6 +1,7 @@
 .contact-form-container{
     width: 100%;
     padding: 100px 7%;
+    position: relative;
     &__header{
         width: 100%;
         .title{
@@ -20,6 +21,12 @@
     &__form{
         .btn-send-contact{
             padding: 1rem 4rem;
+            width: 100%;
+            max-width: initial;
+
+            @include desde(s){
+                max-width: 200px;
+            }
         }
     }
 }

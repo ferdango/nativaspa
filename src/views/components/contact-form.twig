@@ -1,16 +1,27 @@
 <section class="contact-form-container container">
-    <div class=""></div>
+    <div class="modal__content__close modal__close">
+        <span class="icon-close"></span>
+    </div>
     <div class="contact-form-container__header">
         <div class="title">Hablemos</div>
         <div class="subtitle">Comunicate con nosotros para solicitar con nosotros</div>
     </div>    
     <div class="contact-form-container__form">
 
-        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Nombre*:'} } %}
-        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Apellido*:'} } %}
-        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Telefono*:'} } %}
-        {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Email*:'} } %}
-        {% include "../atoms/textarea.twig" with { input: {type: 'text', label: 'Mensaje*:'} } %}
+        <div class="form__row">
+            {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Nombre*:'} } %}
+            {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Apellido*:'} } %}
+        </div>
+
+        <div class="form__row">
+            {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Telefono*:'} } %}
+            {% include "../atoms/inputs.twig" with { input: {type: 'text', label: 'Email*:'} } %}
+        </div>
+
+        <div class="form__row">
+            {% include "../atoms/textarea.twig" with { input: {type: 'text', label: 'Mensaje*:'} } %}
+        </div>
+        
 
         {% include "../atoms/terms-and-conditions.twig" %}
         
