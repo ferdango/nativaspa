@@ -7,7 +7,7 @@ $(".container-nav__link").click(function(){
 
 //programs view
 $(".my-promotions-container__body__item").click(function(){
-    window.location.href = 'detail-promotion.html';
+    window.location.href = 'detail-programs.html';
 })
 
 //only promotion
@@ -156,5 +156,118 @@ tns({
   onInit    : function() {}
 })
 
+tns({
+  container : '.exclusive-promotions-container__slider',
+  mouseDrag : true,
+  center: true,
+  items     : 1,
+  axis: 'horizontal',
+  slideBy: 'page',
+  nav       : false,
+  controls  : false,
+  lazyload  : true,
+  speed     : 400,
+  responsive: {
+  },
+  onInit    : function() {}
+})
+
+//------
+// tab
+if(window.innerWidth < 1024) {
+  /*setTimeout(() => {
+    $('.content__item.active')
+      .find('.content__item__header')
+      .addClass('active')
+      .next().stop(false)
+      .slideDown()
+  }, 100)
+
+  $('.content__item__header').click(function() {
+    if(!$(this).hasClass('active')) {
+      $('.content__item.active')
+        .next().stop(false)
+        .slideUp()
+      $('.content__item').removeClass('active')
+      $('.content__item__header.active').removeClass('active')
+      $(this)
+        .parent()
+        .addClass('active')
+      $(this)
+        .addClass('active')
+        .next().stop(false)
+        .slideDown()
+    } else {
+      $(this)
+        .next().stop(false)
+        .slideUp()
+      $('.content__item').removeClass('active')
+      $('.content__item__header.active').removeClass('active')
+    }
+  })*/
+} else {
+  $('.tabs-box__item').click(function(e) {
+    e.preventDefault()
+    let i = $(this).index()
+    
+    if(!$(this).hasClass('active')) {
+      $('.tabs-box__item').removeClass('active')
+      $(this).addClass('active')
+      console.log( $('.content')
+      .eq(i))
+      $('.content-tab').removeClass('active')
+      $('.content-tab')
+        .eq(i)
+        .addClass('active')
+    }
+  })
+}
 
 
+//Nosotros
+tns({
+  container : '.banner-instalations-container__banner',
+  mouseDrag : true,
+  items     : 1,
+  slideBy: 'page',
+  controls  : false,
+  lazyload  : true,
+  speed     : 400,
+  navContainer: '.banner-instalations-container__header .right.nav',
+  responsive: {
+  },
+  onInit    : function() {
+  }
+})
+
+
+// Detail program
+tns({
+  container: '.slider-banner__horizontal',
+  items: 1,
+  autoHeight: true,
+  lazyload: false,
+  slideBy: 'page',
+  loop: true,
+  mouseDrag : true,
+  navContainer: '.slider-banner__vertical',
+  controls: false
+});
+
+tns({
+  container: '.slider-banner__vertical',
+  items: 4,
+  gutter: 16,
+  lazyload: false,
+  mouseDrag : true,
+  loop: false,
+  slideBy: 1,
+  nav: false
+});
+
+
+// Megamenu 
+$(".megamenu-container__close").click(function(){
+    $(".megamenu-container").removeClass("active")
+    $("body").removeClass("active")
+})

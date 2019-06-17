@@ -17,7 +17,33 @@
             </div>
 
             <div class="only-promotion__main__content">
-                <div class="slider-banner"></div>
+                <div class="slider-banner">
+                    <div class="slider-banner__vertical">
+                        <div class="slider-banner__vertical__item">
+                            <img src="https://picsum.photos/id/67/400/300" />
+                        </div>
+                        <div class="slider-banner__vertical__item">
+                            <img src="https://picsum.photos/id/67/400/300" />
+                        </div>
+                        <div class="slider-banner__vertical__item">
+                            <img src="https://picsum.photos/id/67/400/300" />
+                        </div>
+                    </div>
+                    <div class="slider-banner__horizontal">
+                        <div class="slider-banner__horizontal__item">
+                            <img src="https://picsum.photos/id/1/700/900" />
+                        </div>
+                        <div class="slider-banner__horizontal__item">
+                            <img src="https://picsum.photos/id/3/700/900" />
+                        </div>
+                        <div class="slider-banner__horizontal__item">
+                            <img src="https://picsum.photos/id/4/700/900" />
+                        </div>
+                        <div class="slider-banner__horizontal__item">
+                            <img src="https://picsum.photos/id/5/700/900" />
+                        </div>
+                    </div>
+                </div>
 
                 <div class="promotion-description">
                     <div class="promotion-description__price">
@@ -39,7 +65,7 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-orange btn-reservar">Reservar ahora</a>
+                    <a class="btn btn-orange btn-reserv">Reservar ahora</a>
                 </div>
             </div>
         </section>
@@ -48,6 +74,8 @@
         </div>
         
     </div>
+
+    {% include '../components/modal-hablemos.twig' %}
 
 {% endblock %}
 {% block scripts %}
