@@ -20,12 +20,13 @@ const config = {
             img: './src/img/**/**.*',
             fonts: './src/fonts/**/**.*',
             css: './src/css/**.*',
-            sass: ['src/sass/app.scss'],
+            sass: ['./src/sass/app.scss'],
             js: [
-                'src/js/libs/vue.js',
-                'src/js/app.js',
+                './src/js/libs/vue.js',
+                './src/js/*.js',
             ],
-            jsLib: 'src/js/modules/**.*'
+            jsLib: 'src/js/modules/**.*',
+            iconfonts: './src/icon-fonts/**/*.*'
         },
         dist: {
             main: './dist',
@@ -34,6 +35,7 @@ const config = {
             img: './dist/assets/img',
             fonts: './dist/assets/fonts',
             css: './dist/assets/css',
+            iconfonts: './dist/assets/icon-fonts/',
             html: './dist'
         }
     }

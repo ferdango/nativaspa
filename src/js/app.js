@@ -31,35 +31,81 @@ $('.btn-reserv').click(function() {
   //$('.modal-contact-us').addClass('active')
 })
 
-/*
+// Detail treatment
 tns({
   container : '.our-procedures__slider',
   mouseDrag : true,
+  gutter    : 60,
   items     : 1,
+  axis: 'horizontal',
+  slideBy: 'page',
   nav       : true,
   controls  : false,
   lazyload  : true,
   speed     : 400,
-  //swipeAngle: false,
+  responsive: {
+    480: {
+      edgePadding: 20,
+      gutter: 20,
+      items: 2
+    },
+    768: {
+      gutter: 30,
+      items: 3
+    },
+    1024: {
+      items: 4
+    }
+  },
   onInit    : function() {}
-})*/
+})
+
+
+tns({
+  container : '.facial-creams__slider',
+  mouseDrag : true,
+  gutter    : 60,
+  items     : 1,
+  axis: 'horizontal',
+  slideBy: 'page',
+  nav       : true,
+  controls  : false,
+  lazyload  : true,
+  speed     : 400,
+  edgePadding: 20,
+  responsive: {
+    480: {
+      edgePadding: 20,
+      gutter: 20,
+      items: 2
+    },
+    768: {
+      gutter: 40,
+      items: 3
+    },
+    1024: {
+      gutter: 50,
+      items: 4
+    }
+  },
+  onInit    : function() {}
+})
 
 
 // tab
-
 if(window.innerWidth < 1024) {
   setTimeout(() => {
     $('.content__item.active')
       .find('.content__item__header')
       .addClass('active')
-      .next()
+      .next().stop(false)
       .slideDown()
-  }, 500)
+  }, 100)
 
   $('.content__item__header').click(function() {
     if(!$(this).hasClass('active')) {
       $('.content__item.active')
-        .next()
+        .next().stop(false)
         .slideUp()
       $('.content__item').removeClass('active')
       $('.content__item__header.active').removeClass('active')
@@ -68,27 +114,47 @@ if(window.innerWidth < 1024) {
         .addClass('active')
       $(this)
         .addClass('active')
-        .next()
+        .next().stop(false)
         .slideDown()
     } else {
       $(this)
-        .next()
+        .next().stop(false)
         .slideUp()
       $('.content__item').removeClass('active')
       $('.content__item__header.active').removeClass('active')
     }
   })
 } else {
-  /* $('.home-category__link').click(function(e) {
+  $('.general-tabs__header .tab').click(function(e) {
     e.preventDefault()
     let i = $(this).index()
     if(!$(this).hasClass('active')) {
-      $('.home-category__link').removeClass('active')
+      $('.general-tabs__header .tab').removeClass('active')
       $(this).addClass('active')
-      $('.category-item').removeClass('active')
-      $('.category-item')
+      $('.content__item').removeClass('active')
+      $('.content__item')
         .eq(i)
         .addClass('active')
     }
-  })*/
+  })
 }
+
+
+//Home
+tns({
+  container : '.banner-home-container',
+  mouseDrag : true,
+  items     : 1,
+  axis: 'horizontal',
+  slideBy: 'page',
+  nav       : true,
+  controls  : false,
+  lazyload  : true,
+  speed     : 400,
+  responsive: {
+  },
+  onInit    : function() {}
+})
+
+
+
