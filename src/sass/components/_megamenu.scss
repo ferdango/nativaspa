@@ -33,7 +33,10 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 10px;
         max-height: 90%;
-
+        .cards{
+            display: inline-block;
+            cursor: pointer;
+        }
         .promotion-card{
             min-width: 220px;
             max-width: 320px;

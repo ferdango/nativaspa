@@ -58,18 +58,29 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="megamenu-container__close"></div>
                     </div>    
                 </li>
                 <li class="container-nav__item">
                     <a class="container-nav__link">Programas</a>
                     <div class="megamenu-container">
-                        <div class="megamenu-container__content programs">
-                            {% include '../components/promotion-card.twig' %}
-                            {% include '../components/promotion-card.twig' %}
-                            {% include '../components/promotion-card.twig' %}
-                            {% include '../components/promotion-card.twig' %}
+                        <div class="megamenu-container__content programs">                            
+                            <div class="cards" href="./detail-programs.html">
+                                {% include '../components/promotion-card.twig' %}
+                            </div>
+                            <div class="cards" href="./detail-programs.html">
+                                {% include '../components/promotion-card.twig' %}
+                            </div>
+                            <div class="cards" href="./detail-programs.html">
+                                {% include '../components/promotion-card.twig' %}
+                            </div>
+                            <div class="cards" href="./detail-programs.html">
+                                {% include '../components/promotion-card.twig' %}
+                            </div>
                         </div>
                         <div class="megamenu-container__action"><a class="btn btn-blue-light" href="./programs.html">Ver promociones</a></div>
+                        <div class="megamenu-container__close"></div>
                     </div>
                 </li>
             </div>

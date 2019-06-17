@@ -70,7 +70,7 @@
             grid-template-columns: 1fr 1fr;
         }
         @include desde(m){
-            padding: 0;
+            //padding: 0;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 

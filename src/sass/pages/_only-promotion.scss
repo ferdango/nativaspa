@@ -4,7 +4,10 @@
     &__section-breadcum{
         width: 100%;
         background: $blue-light;
-        padding: 20px 0;
+        padding: 20px 5%;
+        @include desde(s){
+            padding: 20px 7%;
+        }
     }
 
     &__tabs{
@@ -64,7 +67,25 @@
 
             .slider-banner{
                 width: 100%;
-                background: #1c1c1c;
+                //background: #1c1c1c;
+                display: grid;
+                grid-template-columns: minmax(20%, 80px) 1fr;
+                grid-column-gap: 10px;
+                &__vertical{
+                    &__item{
+                        margin-bottom: 10px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &__horizontal{
+                    &__item{
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
 
             .promotion-description{

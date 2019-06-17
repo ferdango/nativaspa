@@ -262,6 +262,7 @@ tns({
   mouseDrag : true,
   loop: false,
   slideBy: 1,
+  axis: 'vertical',
   nav: false
 });
 
@@ -270,4 +271,8 @@ tns({
 $(".megamenu-container__close").click(function(){
     $(".megamenu-container").removeClass("active")
     $("body").removeClass("active")
+})
+
+$(".programs .cards").click(function(){
+  window.location.href = 'detail-programs.html';
 })

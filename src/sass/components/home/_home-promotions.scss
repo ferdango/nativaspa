@@ -7,13 +7,13 @@
     background: rgba(#cacdff, .75);
 
     @include desde(s){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(200px, 340px) 1fr;
         padding: 40px 7% 40px;
     }
 
     @include desde(m){
         padding: 100px 7%;
-        grid-template-columns: minmax(auto, 200px) 1fr 1fr 1fr;
+        //grid-template-columns: minmax(auto, 200px) 1fr 1fr 1fr;
         grid-column-gap: 15px;
     }
 
@@ -99,5 +99,9 @@
             margin-bottom: 0px;
             margin-right: 0px;                      
         }
+    }
+
+    &__slider{
+        //width: 100%;
     }
 }
