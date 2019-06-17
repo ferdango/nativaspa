@@ -1,0 +1,48 @@
+.terms-and-conditions{
+    color: $blue-dark;
+    //padding-left: 5px;
+    display: flex;
+    //justify-content: center;
+    //margin-top: 12px;
+    margin-bottom: 30px;
+    & input {
+      position: absolute;
+    }
+    & * .checkbox__name{
+      display: inline-block;
+      font-size: 11.5px;
+      color: $blue-dark;
+      font-family: $PrimarySemi;
+      font-weight: normal;
+      line-height: 20px;
+      @include desde(s){
+        line-height: initial;
+        margin-top: 2px;
+      }
+      a{
+        border-bottom: solid 1px rgba($color: $blue-dark, $alpha: .2);
+        padding-bottom: 1px;
+        color: $ilaria;;
+        transition: all .15s ease-in-out;
+        @include desde(s){
+          padding-bottom: 3px;
+        }
+        &:hover{
+          color: $ilaria;
+          //border-bottom: solid 1px #dadada;
+          transition: all .15s ease-in-out;
+        }
+      }
+    }
+    & * .checkbox__box{
+      //margin-top: 2px;
+      position: relative;
+      min-width: 20px;
+      min-height: 20px;
+      @include desde(s){
+        margin-top: -0.5px;
+        border-radius: 2px;
+        border: 1px solid rgba($color: $blue-dark, $alpha: .7);
+      }
+    }
+  }

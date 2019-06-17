@@ -11,7 +11,9 @@
     background: $white;
     z-index: 10;
     top: 0;
+    box-shadow: 0px 5px 25px -1px rgba($black,0.50);
     @include desde(m){
+        box-shadow: none;
         padding: 0 7%;
         position: relative;
     }
@@ -39,12 +41,13 @@
 
     .container-nav{
         font-family: $PrimaryBold;
-        justify-content: space-around;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         display: flex;
         z-index: 10;
         top: 100px;
-        background: rebeccapurple;
+        background: transparent;
         top: 70px;
         left: 0;
         height: calc(100vh - 70px);
@@ -52,11 +55,16 @@
         width: 100%;
         max-width: 300px;
         transform: translateX(-100%);
-        @include desde(s){
-            //transform: none;
+        padding: 60px 5%;
+        &.active{
+            transform: none;
         }
         @include desde(m){
             position: relative;
+            flex-direction: row;
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
             margin-right: 35px;
             top: 0px;
             height: auto;
@@ -69,7 +77,13 @@
             font-size: 12px;
             color: $black;
             cursor: default;
-            margin-right:40px;
+            margin-right:0;
+            width: 100%;
+            @include desde(m){
+                width: auto;
+                margin-right:40px;
+            }
+
             &:last-child(){
                 margin-right:0;
             }
@@ -81,6 +95,10 @@
             position: relative;
             transition: all .35s ease-in-out;
             text-transform: uppercase;
+            width: 100%;
+            @include desde(m){
+                width: auto;
+            }
             &::before{
                 content: "";
                 width: 0;
