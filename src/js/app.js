@@ -1,3 +1,7 @@
+AOS.init({
+  duration: 1200,
+})
+
 $(".container-nav__link").click(function(){
     $(".megamenu-container").removeClass("active");
     $("body").removeClass("active");
@@ -41,6 +45,9 @@ tns({
   slideBy: 'page',
   nav       : true,
   controls  : false,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
   lazyload  : true,
   speed     : 400,
   responsive: {
@@ -69,6 +76,9 @@ tns({
   axis: 'horizontal',
   slideBy: 'page',
   nav       : true,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
   controls  : false,
   lazyload  : true,
   speed     : 400,
@@ -141,36 +151,88 @@ if(window.innerWidth < 1024) {
 
 
 //Home
-tns({
+$("#video-gallery").lightGallery();
+
+$(document).ready(function(){
+  $(".banner-home .tns-nav button").click(function(){      
+    resetAnimation()
+  })
+})
+
+function resetAnimation(){
+  var el     = $("#bar"),  
+      newone = el.clone(true);
+            
+  el.before(newone);     
+  $("." + el.attr("class") + ":last").remove();
+
+}
+var bannerHome = tns({
   container : '.banner-home-container',
   mouseDrag : true,
   items     : 1,
   axis: 'horizontal',
   slideBy: 'page',
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
   nav       : true,
   controls  : false,
   lazyload  : true,
   speed     : 400,
   responsive: {
   },
-  onInit    : function() {}
+  onInit    : function() {
+  }
 })
+/*
+function loadingSlider() {
+  var elem = document.querySelector(".bar"); 
+  var width = 1;
+  var time = setInterval(frame, 30);
+  function frame() {
+    if (width >= 100) {
+      bannerHome.goTo('next')
+      clearInterval(time);
+      loadingSlider()
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}*/
 
 tns({
-  container : '.exclusive-promotions-container__slider',
+  container : '.exclusive-promotions-container__left__slider',
   mouseDrag : true,
-  center: true,
   items     : 1,
   axis: 'horizontal',
-  slideBy: 'page',
   nav       : false,
   controls  : false,
   lazyload  : true,
+  slideBy: 1,
   speed     : 400,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
   responsive: {
+    480: {
+      edgePadding: 20,
+      gutter: 20,
+      items: 2
+    },
+    768: {
+      gutter: 40,
+      items: 3
+    },
+    1024: {
+    }
   },
-  onInit    : function() {}
+  onInit    : function() {
+  }
 })
+
+
 
 //------
 // tab
@@ -231,6 +293,9 @@ tns({
   items     : 1,
   slideBy: 'page',
   controls  : false,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
   lazyload  : true,
   speed     : 400,
   navContainer: '.banner-instalations-container__header .right.nav',

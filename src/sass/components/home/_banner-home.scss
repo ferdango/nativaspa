@@ -21,6 +21,10 @@
         }
     }
 
+    /*[data-action=stop]{
+        display: none;
+    }*/
+
     .tns-nav{
         width: 100%;
         max-width: 1400px;
@@ -194,3 +198,26 @@
         }
     }
 }
+
+.progressBar-slider {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 3px;
+    z-index: 5;
+
+    #bar{
+        width: 0%;
+        height: 3px;
+        background-color: $blue-light;
+        transition-timing-function: ease-in-out;
+    }
+  }
+  
+  .run-animation {
+    animation: animBar 5s ease-in-out 500ms infinite;
+    @keyframes animBar {
+        from {width: 0%;}
+        to {width: 100%;}
+    }
+  }

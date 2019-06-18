@@ -1,29 +1,31 @@
 .exclusive-promotions-container{
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    //max-width: 1024px;
-    padding: 0px 7% 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 7% 60px;
     background: rgba(#cacdff, .75);
-
-    @include desde(s){
-        grid-template-columns: minmax(200px, 340px) 1fr;
-        padding: 40px 7% 40px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    @include desde(s){  
+        flex-direction: row;
+        padding: 50px 7% 50px;
     }
 
     @include desde(m){
         padding: 100px 7%;
-        //grid-template-columns: minmax(auto, 200px) 1fr 1fr 1fr;
-        grid-column-gap: 15px;
     }
 
-    &__item{
+    &__right{
         margin-right: 0px;
+        max-width: 190px;
+        //width: 100%;
+        margin-bottom: 80px;
 
         @include desde(s){
             margin: initial;
-            margin-right: 20px;
-            
+            margin-right: 50px;
+            margin-bottom: 0;
             &:nth-child(2n+2){
                 margin-right: 0px;
             }
@@ -42,18 +44,18 @@
         &.no-card{
             display: flex;
             align-items: center;
-            padding: 80px 0;
+            //padding: 80px 0;
             .card__body{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items:    center;
                 padding: 0; 
                 margin-right: 0;
                 color: $blue-dark;
 
                 @include desde(s){
-                    margin-left: 15%;
+                    //margin-left: 15%;
                     align-items: flex-start;
                 }
 
@@ -101,7 +103,26 @@
         }
     }
 
-    &__slider{
-        //width: 100%;
+    &__left{
+        width: 100%;
+        padding: 0 5%;
+        max-width: 700px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include desde(s){
+            width: 80%;
+        }
+        .promotion-card{
+            margin-right: 20px;
+            @include desde(s){
+                margin-right: 15px;
+            }
+        }
+
+        &__slider{
+            width: 100%;
+        }
     }
 }
