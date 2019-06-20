@@ -3,20 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
     margin: auto;
     height: 70px;
     padding: 0 5%;
-    position: fixed;
+    position: relative;
     background: $white;
-    z-index: 20;
+    z-index: 50;
     top: 0;
-    box-shadow: 0px 5px 25px -1px rgba($black,0.50);
+    //box-shadow: 0px 5px 25px -1px rgba($black,0.50);
+    box-shadow: none;
+    transition: all .75s ease-out;
     @include desde(m){
         box-shadow: none;
         padding: 0 7%;
         position: relative;
     }
+
     .box-left{
         display: flex;
         justify-content: flex-start;
@@ -36,6 +38,9 @@
         .brand{
             width: 100%;
             max-width: 120px;
+            &.white-color{
+                display: none;
+            }
         }
     }
 
@@ -79,6 +84,7 @@
             cursor: default;
             margin-right:0;
             width: 100%;
+            cursor: pointer;
             @include desde(m){
                 width: auto;
                 margin-right:40px;
@@ -99,6 +105,21 @@
             width: 100%;
             @include desde(m){
                 width: auto;
+
+                &.active{
+                    color: $blue-light !important;
+                    &::before{
+                        content: "";
+                        width: 100%;
+                        background: $blue-light;
+                        height: 4px;
+                        position: absolute;
+                        display: inline-block;
+                        bottom: -5px;
+                        transition: all .35s ease-in-out;
+                    }    
+
+                }
             }
             &::before{
                 content: "";
@@ -147,5 +168,19 @@
         .btn-contact{
             padding: 0.8rem 1.5rem;
         }
+    }
+}
+
+.fixed-header{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    transition: all .75s ease-out;
+    box-shadow: 0px 5px 25px -1px rgba($black,0.50);
+    background: $white !important;
+    
+    .container-nav__link{
+        color: #5d5d5d !important;
     }
 }

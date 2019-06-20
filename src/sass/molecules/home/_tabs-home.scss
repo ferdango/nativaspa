@@ -10,10 +10,16 @@
         position: absolute;
         right: 0;
         bottom: 0;
+        max-width: 300px;
         display: none;
 
         @include desde(m){
             display: block;
+        }
+
+        @include desde(l){
+            max-width: 400px;
+            width: 30%;
         }
     }
     &__header{
@@ -27,6 +33,15 @@
             font-size: 28px;
             font-family: $PrimaryBold;
             padding: 20px 0px;
+            position: relative;
+            .letter-floor{
+                width: 350px;
+                height: 80px;
+                position: absolute;
+                left: -50px;
+                top: calc(50% - 40px);
+                background: rgba($blue-dark, .35);
+            }
         }
     }
 
@@ -38,7 +53,7 @@
         grid-template-rows: 1fr 1fr;
 
         @include desde(m){
-            max-width: 70%;
+            max-width: 768px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr;
         }
@@ -67,7 +82,7 @@
 
                     @include desde(m){
                         max-width: 85%;
-                        padding: 20px 100px 20px 60px;
+                        padding: 20px 100px 20px 0px;
                         height: 95px;
                         font-size: 18px;
                     }

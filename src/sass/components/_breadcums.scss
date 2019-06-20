@@ -36,6 +36,8 @@
 
     &-container{
         padding: 20px 5%;
+        max-width: 1400px;
+        margin: auto;
         @include desde(s){
             padding: 25px 7%;
         }

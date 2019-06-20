@@ -24,6 +24,12 @@ body {
       box-shadow: none;
       background: transparent;
 
+      @include desde(m){
+        box-shadow: none;
+        padding: 0 7%;
+        position: absolute;
+      }
+
       .container-nav__link{
         color: $white;
       }
