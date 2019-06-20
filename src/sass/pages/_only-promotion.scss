@@ -71,6 +71,7 @@
                 display: grid;
                 grid-template-columns: minmax(20%, 80px) 1fr;
                 grid-column-gap: 10px;
+                padding-top: 25px;
                 &__vertical{
                     &__item{
                         margin-bottom: 10px;
