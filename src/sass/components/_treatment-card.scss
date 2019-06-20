@@ -3,6 +3,8 @@
     height: 480px;
     position: relative;
     transition: all .35s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .treatment-card{
@@ -29,9 +31,10 @@
     }
 
     &__image{
-        width: 100%;
+        width: 75%;
         height: 100%;
         object-fit: cover;
+        object-position: left;
     }
 
     &__content{

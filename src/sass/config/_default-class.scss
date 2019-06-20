@@ -31,7 +31,9 @@ body {
       }
 
       .container-nav__link{
-        color: $white;
+        @include desde(m){
+          color: $white;
+        }
       }
     }
   }
@@ -52,4 +54,8 @@ body {
   //Contenedor de rows full screen, sin grid
   .container-fluid{
     max-width: 100%;
+  }
+
+  .active-logo{
+    display: block;
   }

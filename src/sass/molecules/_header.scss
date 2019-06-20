@@ -29,6 +29,7 @@
             width: 20px;
             height: 15px;
             display: block;
+            z-index: 15;
 
             @include desde(s){
                 display: none;
@@ -52,16 +53,27 @@
         display: flex;
         z-index: 10;
         top: 100px;
-        background: transparent;
+        background: $white;
         top: 70px;
         left: 0;
         height: calc(100vh - 70px);
         position: fixed;
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        transition: all .5s ease-out;
         transform: translateX(-100%);
-        padding: 60px 5%;
+        padding: 30px 0;
         letter-spacing: 0.5px;
+        /*&::before{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            top: -70px;
+            left: 0;
+            background: $blue-light;
+        }*/
         &.active{
             transform: none;
         }
@@ -71,6 +83,7 @@
             padding: 0;
             justify-content: space-around;
             align-items: center;
+            background: transparent;
             margin-right: 35px;
             top: 0px;
             height: auto;
@@ -80,14 +93,19 @@
         }
 
         &__item{
-            font-size: 12px;
+            font-size: 14px;
+            font-family: $PrimaryBold;
             cursor: default;
             margin-right:0;
             width: 100%;
             cursor: pointer;
+            border-bottom: 1px solid rgba($white, .35);
             @include desde(m){
                 width: auto;
+                font-size: 12px;
                 margin-right:40px;
+                border-bottom: none;
+                font-family: $PrimarySemi;
             }
 
             &:last-child(){
@@ -97,12 +115,42 @@
 
         &__link{
             display: inline-block;
-            padding: 20px 0;
+            padding: 14px 7%;
             position: relative;
-            color: #5d5d5d;
-            transition: all .35s ease-in-out;
+            color: #505050;
+            transition: all .4s ease-out;
             text-transform: uppercase;
             width: 100%;
+
+            &::before{
+                content: "";
+                width: 0;
+                background: $blue-light;
+                height: 4px;
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                bottom: -5px;
+                transition: all .35s ease-in-out;
+            }
+
+            &:hover{
+                transition: all .4s ease-out;
+                //background: $blue-light;
+                color: rgba(#5d5d5d, .85);
+                &::before{
+                    width: 0;
+                    background: $blue-light;
+                    height: 4px;
+                    position: absolute;
+                    display: inline-block;
+                    bottom: -5px;
+                    transition: all .35s ease-in-out;
+                    @include desde(m){
+                        width: 100%;
+                    }
+                }    
+            }
             @include desde(m){
                 width: auto;
 
@@ -121,32 +169,7 @@
 
                 }
             }
-            &::before{
-                content: "";
-                width: 0;
-                background: $blue-light;
-                height: 4px;
-                position: absolute;
-                display: inline-block;
-                left: 0;
-                bottom: -5px;
-                transition: all .35s ease-in-out;
-            }
-
-            &:hover{
-                transition: all .35s ease-in-out;
-                color:$blue-light;
-                &::before{
-                    content: "";
-                    width: 100%;
-                    background: $blue-light;
-                    height: 4px;
-                    position: absolute;
-                    display: inline-block;
-                    bottom: -5px;
-                    transition: all .35s ease-in-out;
-                }    
-            }
+            
         }
     }
     .box-right{
@@ -182,5 +205,8 @@
     
     .container-nav__link{
         color: #5d5d5d !important;
+        &:hover{
+            color: rgba(#5d5d5d, .85) !important;
+        }
     }
 }

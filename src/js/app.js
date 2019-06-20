@@ -4,13 +4,13 @@ AOS.init({
 $(window).scroll(function(){
   if ($(window).scrollTop() >= 70) {
       $('.container-header').addClass('fixed-header');
-      $(".brand.white-color").css("display" , "none");
-      $(".brand.blue-color").css("display" , "block");
+      $(".brand.white-color").removeClass("active-logo")
+      $(".brand.blue-color").addClass("active-logo")
   }
   else {
       $('.container-header').removeClass('fixed-header');
-      $(".brand.blue-color").css("display" , "block");
-      $(".brand.white-color").css("display" , "none");
+      $(".brand.blue-color").toggleClass("active-logo");
+      $(".brand.white-color").toggleClass("active-logo");
   }
 });
 
@@ -19,6 +19,12 @@ $(window).scroll(function(){
 $(".megamenu-container__close").click(function(){
   $(".megamenu-container").removeClass("active")
   $("body").removeClass("active")
+  $(".container-nav__link").removeClass("active");
+  if(window.innerWidth < 1024) {
+    $(".open-sidebar-menu").trigger("click");
+  }else{
+
+  }
 })
 
 $(".container-nav__link").click(function(){
@@ -28,29 +34,22 @@ $(".container-nav__link").click(function(){
     $("body").removeClass("active");
     $(this).next(".megamenu-container").toggleClass("active");
     $('.container-header').addClass('fixed-header');
-    $(".brand.white-color").css("display" , "none");
-    $(".brand.blue-color").css("display" , "block");
+    $(".brand.white-color").toggleClass("active-logo");
+    $(".brand.blue-color").toggleClass("active-logo");
     $("body").toggleClass("active");
+    if(window.innerWidth < 1024) {
+      //$(".open-sidebar-menu").
+    }else{
+      
+      
+    }
 })
 
 //programs view
-$(".my-promotions-container__body__item").click(function(){
-    window.location.href = 'detail-programs.html';
-})
 
 //only promotion
 $(".btn-reservar").click(function(){
     $(".modal-contact-us").addClass("active");
-})
-
-//service treatment card 
-$(".treatment-service-card").click(function(){
-    window.location.href = 'detail-treatment.html';
-})
-
-//detail treatment
-$(".our-procedures__slider__item").click(function(){
-    window.location.href = 'detail-sub-treatment.html';
 })
 
 //Reserve modal
@@ -58,73 +57,6 @@ $('.btn-reserv').click(function() {
   HELPERS.toggleModal('modal-contact-us')
   //$('.modal-contact-us').addClass('active')
 })
-
-// Detail treatment
-tns({
-  container : '.our-procedures__slider',
-  mouseDrag : true,
-  gutter    : 60,
-  items     : 1,
-  axis: 'horizontal',
-  slideBy: 'page',
-  nav       : true,
-  controls  : false,
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  lazyload  : true,
-  speed     : 400,
-  responsive: {
-    480: {
-      edgePadding: 20,
-      gutter: 20,
-      items: 2
-    },
-    768: {
-      gutter: 30,
-      items: 3
-    },
-    1024: {
-      items: 4
-    }
-  },
-  onInit    : function() {}
-})
-
-
-tns({
-  container : '.facial-creams__slider',
-  mouseDrag : true,
-  gutter    : 60,
-  items     : 1,
-  axis: 'horizontal',
-  slideBy: 'page',
-  nav       : true,
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  controls  : false,
-  lazyload  : true,
-  speed     : 400,
-  edgePadding: 20,
-  responsive: {
-    480: {
-      edgePadding: 20,
-      gutter: 20,
-      items: 2
-    },
-    768: {
-      gutter: 40,
-      items: 3
-    },
-    1024: {
-      gutter: 50,
-      items: 4
-    }
-  },
-  onInit    : function() {}
-})
-
 
 // tab
 if(window.innerWidth < 1024) {
@@ -173,93 +105,7 @@ if(window.innerWidth < 1024) {
   })
 }
 
-
-//Home
-$("#video-gallery").lightGallery();
-
-$(document).ready(function(){
-  $(".banner-home .tns-nav button").click(function(){      
-    resetAnimation()
-  })
-})
-
-function resetAnimation(){
-  var el     = $("#bar"),  
-      newone = el.clone(true);
-            
-  el.before(newone);     
-  $("." + el.attr("class") + ":last").remove();
-
-}
-var bannerHome = tns({
-  container : '.banner-home-container',
-  mouseDrag : true,
-  items     : 1,
-  axis: 'horizontal',
-  slideBy: 'page',
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  nav       : true,
-  controls  : false,
-  lazyload  : true,
-  speed     : 400,
-  responsive: {
-  },
-  onInit    : function() {
-  }
-})
-/*
-function loadingSlider() {
-  var elem = document.querySelector(".bar"); 
-  var width = 1;
-  var time = setInterval(frame, 30);
-  function frame() {
-    if (width >= 100) {
-      bannerHome.goTo('next')
-      clearInterval(time);
-      loadingSlider()
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}*/
-
-tns({
-  container : '.exclusive-promotions-container__left__slider',
-  mouseDrag : true,
-  items     : 1,
-  axis: 'horizontal',
-  nav       : false,
-  controls  : false,
-  lazyload  : true,
-  slideBy: 1,
-  speed     : 400,
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  responsive: {
-    480: {
-      edgePadding: 20,
-      gutter: 20,
-      items: 2
-    },
-    768: {
-      gutter: 40,
-      items: 3
-    },
-    1024: {
-    }
-  },
-  onInit    : function() {
-  }
-})
-
-
-
-//------
-// tab
+//tab megamenu service
 if(window.innerWidth < 1024) {
   /*setTimeout(() => {
     $('.content__item.active')
@@ -292,72 +138,29 @@ if(window.innerWidth < 1024) {
     }
   })*/
 } else {
-  $('.tabs-box__item').click(function(e) {
+  $('.services .tabs-box__item').click(function(e) {
     e.preventDefault()
     let i = $(this).index()
     
     if(!$(this).hasClass('active')) {
-      $('.tabs-box__item').removeClass('active')
+      $('.services .tabs-box__item').removeClass('active')
       $(this).addClass('active')
-      console.log( $('.content')
+      console.log( $('.services .tabs-content .content')
       .eq(i))
-      $('.content-tab').removeClass('active')
-      $('.content-tab')
+      $('.services .tabs-content .content').removeClass('active');
+      $('.services .tabs-content .content')
         .eq(i)
-        .addClass('active')
+        .addClass('active');
     }
   })
 }
 
-
-//Nosotros
-tns({
-  container : '.banner-instalations-container__banner',
-  mouseDrag : true,
-  items     : 1,
-  slideBy: 'page',
-  controls  : false,
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  lazyload  : true,
-  speed     : 400,
-  navContainer: '.banner-instalations-container__header .right.nav',
-  responsive: {
-  },
-  onInit    : function() {
-  }
-})
-
-
-// Detail program
-tns({
-  container: '.slider-banner__horizontal',
-  items: 1,
-  autoHeight: true,
-  lazyload: false,
-  slideBy: 'page',
-  loop: true,
-  mouseDrag : true,
-  navContainer: '.slider-banner__vertical',
-  controls: false
-});
-
-tns({
-  container: '.slider-banner__vertical',
-  items: 4,
-  gutter: 16,
-  lazyload: false,
-  mouseDrag : true,
-  loop: false,
-  slideBy: 1,
-  axis: 'vertical',
-  nav: false
-});
-
-
-
-
-$(".programs .cards").click(function(){
-  window.location.href = 'detail-programs.html';
+//open menu sidebar
+$(".open-sidebar-menu").click(function(){
+  $(".container-nav").toggleClass("active")
+  $('.container-header').toggleClass('fixed-header');
+  $(".brand.white-color").toggleClass("active-logo");
+  $(".brand.blue-color").toggleClass("active-logo");
+  $(".megamenu-container").removeClass("active")
+  $("body").toggleClass("active")
 })

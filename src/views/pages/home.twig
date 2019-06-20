@@ -29,18 +29,5 @@
 
 {% endblock %}
 {% block scripts %}
-<script>
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= 70) {
-      $('.container-header').addClass('fixed-header');
-      $(".brand.blue-color").css("display" , "block");
-      $(".brand.white-color").css("display" , "none");
-  }
-  else {
-      $('.container-header').removeClass('fixed-header');
-      $(".brand.blue-color").css("display" , "none");
-      $(".brand.white-color").css("display" , "block");
-  }
-});
-</script>
+   <script src="./assets/js/home.js"></script>
 {% endblock %}

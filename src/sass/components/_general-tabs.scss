@@ -56,13 +56,22 @@
     &__body{
         padding-top: 40px;
         padding-bottom: 20px;
-        
+        position: relative;
         
         .content__item{
             color: $blue-dark;
-
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            transition: all .55s ease-in;
             &.active{
-                display: block;
+                opacity: 1;
+                visibility: visible;
+                z-index: 1;
+                position: relative;
                 & .content__item__body{
                     display: block;
                     /*@include desde(s){

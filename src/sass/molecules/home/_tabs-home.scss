@@ -50,7 +50,7 @@
         max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
 
         @include desde(m){
             max-width: 768px;
@@ -60,12 +60,13 @@
 
         .tabs{
             &-box{
-                display: flex;
+                display: none;
                 flex-direction: column;
                 border-right: none;
                 
                 @include desde(m){
                     //padding: 20px 15%;
+                    display: flex;
                     border-right: 1.25px solid rgba($blue-dark ,.1);
                 }
 
@@ -83,7 +84,7 @@
                     @include desde(m){
                         max-width: 85%;
                         padding: 20px 100px 20px 0px;
-                        height: 95px;
+                        //height: 95px;
                         font-size: 18px;
                     }
     
@@ -112,10 +113,42 @@
                     padding: 20px 15%;
                 }
 
-                .content{
-                    display: none;
-                    &.active{
+                .content{   
+                    display: block;
+                    margin-bottom: 30px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    @include desde(m){
+                        margin-bottom: 0;
+                        display: none;
+                        &.active{
+                            display: block;
+                        }
+                    }
+                    
+                    &-tab__header{
                         display: block;
+                        width: 100%;
+                        padding: 10px 0;
+                        cursor: pointer;
+                        color: $blue-dark;
+                        font-family: $PrimarySemi;
+                        font-size: 18px;
+                        border-bottom: 1px solid rgba($blue-dark, .45);
+                        margin-bottom: 30px;
+                        line-height: 1.5;
+
+                        @include desde(m){
+                            display: none;
+                        }
+                    }
+
+                    .info{
+                        display: none;
+                        @include desde(m){
+                            display: block;
+                        }
                     }
 
                     .icon{

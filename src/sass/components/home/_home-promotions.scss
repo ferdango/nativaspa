@@ -123,6 +123,8 @@
 
         &__slider{
             width: 100%;
+            cursor: pointer;
+            max-width: 768px;
         }
     }
 }
