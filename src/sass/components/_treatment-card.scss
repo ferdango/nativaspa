@@ -168,13 +168,14 @@
             
             .more-info{
                 color: $blue-dark;
-                position: absolute;
+                position: relative;
                 margin-top: 50px;
                 text-transform: uppercase;
                 font-family: $PrimaryBold;
                 font-size: 12px;
-                padding-right: 50px;
+                //padding-right: 50px;
                 right: 0;
+                text-align: right;
                 transition: all .35s ease-in-out;
                 &::before{
                     content: "";
