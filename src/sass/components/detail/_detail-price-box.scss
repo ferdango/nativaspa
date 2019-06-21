@@ -28,9 +28,19 @@
         .description-menu{
             &__item{
                 padding: 7px 0;
-                padding-left: 25px;
+                padding-left: 20px;
                 font-family: $SecundaryRegular;
-                 font-size: 15px;
+                 font-size: 15px;position: relative;
+
+                &::before{
+                    content:"\e90e";
+                    position: absolute;
+                    left: 0;
+                    display: inline-block;
+                    color: $blue-light;
+                    font-size: 12px;
+                    font-family: icomoon;
+                }
             }
         }
 

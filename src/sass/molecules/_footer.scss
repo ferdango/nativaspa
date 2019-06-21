@@ -2,7 +2,8 @@
     background: $white;
     display: flex;
     flex-direction: column;
-
+    border-top: 1.5px solid rgba(#505050, .2);
+    margin-top: 8px;
     .box{
         &-top{
             width: 100%;
@@ -45,7 +46,7 @@
 
                 .title{
                     text-transform: uppercase;
-                    font-family: $PrimaryBold;
+                    font-family: $PrimaryRegular;
                     font-size: 16px;
                     color: $blue-light;
                 }
@@ -58,7 +59,7 @@
                     &__item{
                         font-size: 14px;
                         color: #aaaaaa;
-                        font-family: $PrimarySemi;
+                        font-family: $PrimaryMedium;
                         padding: 10px 0;
                         padding-left: 10px;
                         position: relative;
@@ -86,7 +87,7 @@
                         
                         & .nav__item{
                             border-radius: 50%;
-                            border: 3px solid #aaaaaa;
+                            border: 2px solid #aaaaaa;
                             margin-right: 20px;
                             padding: 0;
                             width: 30px;
@@ -164,10 +165,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 10px;
+            font-size: 11px;
             color: #aaaaaa;
             margin: auto;
             padding: 10px 7% 20px 7%;
+            font-family: $SecundaryRegular;
         }
     }
 }

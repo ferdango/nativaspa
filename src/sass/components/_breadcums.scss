@@ -5,8 +5,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-size: 12px;
-    font-family: $PrimarySemi;
+    font-size: 13px;
+    font-family: $PrimaryRegular;
     font-size: 14px;
     letter-spacing: 0.45px;
 
@@ -21,8 +21,14 @@
         cursor: pointer;
         line-height: 1.5;
         color: rgba($blue-dark, .5);
+        display: flex;
+        align-items: center;
         &:last-child{
             color: $blue-dark;
+        }
+
+        .icon-arrow-right{
+            font-size: 14px;
         }
     }
 

@@ -21,6 +21,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            font-family: $PrimaryLight;
 
             @include desde(s){
                 flex-direction: row;
@@ -51,6 +52,8 @@
             text-align: center;
             max-width: 768px;
             margin: auto;
+            font-family: $SecundaryRegular;
+            font-size: 16px;
         }
     }
 
@@ -77,5 +80,34 @@
         &__item{
             display: inline-block;
         }
+    }
+}
+
+
+
+.banner-programs{
+    &__content{
+        font-family: $SecundaryLight;
+        font-size: 18px;
+
+        .bold{
+            font-family: $PrimaryBold;
+            margin-top: 20PX;
+        }
+    }
+
+    &__image img{
+        @include desde(m){
+            height: 768px;
+            max-height: none;
+        }
+    }
+
+    &__info-footer{
+        bottom: 60px;
+    }
+
+    .progressBar-slider{
+        bottom: 25px;
     }
 }

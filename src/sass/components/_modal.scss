@@ -49,14 +49,24 @@
         position: absolute;
         background: $blue-dark;
         display: flex;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         right: 7%;
         justify-content: center;
         align-items: center;
         top: 30px;
+        color: $white;
+        font-size: 24px;
         border-radius: 50%;
         cursor: pointer;
+      }
+
+      .contact-form-container{
+        padding: 50px 7%;
+
+        .input-material input{
+          height: 40px;
+        }
       }
     }
   }
