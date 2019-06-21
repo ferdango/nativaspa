@@ -51,6 +51,7 @@
                     display: inline-block;
                     position: absolute;
                     bottom: 8px;
+                    right: -30px;
                }
             }
         }
@@ -84,7 +85,11 @@
                 &__horizontal{
                     &__item{
                         height: 100%;
-                        object-fit: cover;
+                        img{
+                            height: 540px;
+                            object-fit: cover;
+                        }
+                        
                     }
                 }
             }

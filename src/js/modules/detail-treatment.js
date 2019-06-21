@@ -62,3 +62,8 @@ tns({
     },
     onInit    : function() {}
   })
+
+$(".our-procedures__slider__item").click(function(){
+  window.location.href = 'detail-sub-treatment.html';
+})
+

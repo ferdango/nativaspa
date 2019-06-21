@@ -1,3 +1,25 @@
+%places-box{
+    background: $white;
+    width: 100%;
+    max-width: 360px;
+    padding: 15px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all .45s ease-out;
+    transform: translateX(-100%);
+}
+
+%activate-places-box{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    transition: all .45s ease-out;
+    transform: translateX(0%);
+}
+
+
 .contact-map-container{
     width: 100%;
     position: relative;
@@ -10,13 +32,79 @@
     }
 
     &__content{
-        background: $white;
-        width: 100%;
-        max-width: 360px;
-        padding: 15px;
-        position: absolute;
-        top: calc(50% - 250px);
-        left: 7%;
+        @extend %places-box;
+        &.all-places{
+            top: calc(50% - 250px);
+            left: 7%;
+            transform: translateX(-110%);
+
+            &.active{
+                @extend %activate-places-box;
+            }
+
+            .places-store-box{
+                border-top: 1.5px solid rgba(#1c1c1c, .15);  
+                &__header{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }          
+            }
+        }
+
+        &.selected-place{
+            height: 100%;
+            left: 0;
+            top: 0;
+            max-width: 35%;
+            padding: 15px 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateX(-100%);
+            &.active{
+                @extend %activate-places-box;
+            }
+
+            .places-store-box{
+                &__header{
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    @include desde(s){
+                        font-size: 28px;
+                    }
+
+                    @include desde(m){
+                        font-size: 32px;
+                    }
+                }
+                &__body{
+                    .text{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 50px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        & .icon{
+                            margin-right: 15px;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                    .direction{
+                        font-size: 22px;
+                        color: $blue-dark;
+                        margin-bottom: 80px;
+                    }  
+                    .schedule, .phone{
+                        color: #505050;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
         &__header{
             padding: 10px 30px;
             color: $blue-dark;
@@ -31,10 +119,8 @@
 
             .places-store-box{
                 padding: 30px 20px;
-                border-top: 1.5px solid rgba(#1c1c1c, .15);        
                 
                 &__header{
-                    text-transform: uppercase;
                     font-size: 16px;
                     font-family: $PrimaryBold;
                     color: $blue-light;
@@ -54,6 +140,7 @@
                         margin-top: 30px;
                         color: $blue-light;
                         position: relative;
+                        cursor: pointer;
                         &::before{
                             content: "";
                             width: 100%;

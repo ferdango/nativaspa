@@ -1,21 +1,27 @@
 .exclusive-promotions-container{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 60px 7% 60px;
     background: rgba(#cacdff, .75);
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    @include desde(s){  
-        flex-direction: row;
-        padding: 50px 7% 50px;
-    }
 
-    @include desde(m){
-        padding: 100px 7%;
+    &__wrapper{
+        width: 100%;
+        max-width: 1224px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 7% 60px;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        @include desde(s){  
+            flex-direction: row;
+            padding: 50px 7% 50px;
+        }
+    
+        @include desde(m){
+            padding: 100px 7%;
+        }    
     }
-
+   
     &__right{
         margin-right: 0px;
         max-width: 190px;
