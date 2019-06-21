@@ -1,16 +1,19 @@
 AOS.init({
   duration: 1200,
 })
+
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 70) {
+  if(window.innerWidth > 1024) {
+    if ($(window).scrollTop() > 0) {
       $('.container-header').addClass('fixed-header');
       $(".brand.white-color").removeClass("active-logo")
       $(".brand.blue-color").addClass("active-logo")
-  }
-  else {
-      $('.container-header').removeClass('fixed-header');
-      $(".brand.blue-color").toggleClass("active-logo");
-      $(".brand.white-color").toggleClass("active-logo");
+    }
+    else {
+        $('.container-header').removeClass('fixed-header');
+        $(".brand.blue-color").toggleClass("active-logo");
+        $(".brand.white-color").toggleClass("active-logo");
+    }
   }
 });
 
@@ -27,25 +30,26 @@ $(".megamenu-container__close").click(function(){
   }
 })
 
+
 $(".container-nav__link").click(function(){
-    $(".container-nav__link").removeClass("active");
-    $(this).addClass("active");
-    $(".megamenu-container").removeClass("active");
-    $("body").removeClass("active");
-    $(this).next(".megamenu-container").toggleClass("active");
-    $('.container-header').addClass('fixed-header');
-    $(".brand.white-color").toggleClass("active-logo");
-    $(".brand.blue-color").toggleClass("active-logo");
-    $("body").toggleClass("active");
+    
     if(window.innerWidth < 1024) {
       //$(".open-sidebar-menu").
-    }else{
-      
-      
-    }
-})
 
-//programs view
+    
+    }else{
+      $(".container-nav__link").removeClass("active");
+      $(this).addClass("active");
+      $(".megamenu-container").removeClass("active");
+      $("body").removeClass("active");
+      $(this).next(".megamenu-container").toggleClass("active");
+      $('.container-header').addClass('fixed-header');
+      $(".brand.white-color").toggleClass("active-logo");
+      $(".brand.blue-color").toggleClass("active-logo");
+      $("body").toggleClass("active");
+    }
+    
+})
 
 //only promotion
 $(".btn-reservar").click(function(){
@@ -55,7 +59,6 @@ $(".btn-reservar").click(function(){
 //Reserve modal
 $('.btn-reserv').click(function() {
   HELPERS.toggleModal('modal-contact-us')
-  //$('.modal-contact-us').addClass('active')
 })
 
 // tab
@@ -107,21 +110,21 @@ if(window.innerWidth < 1024) {
 
 //tab megamenu service
 if(window.innerWidth < 1024) {
-  /*setTimeout(() => {
-    $('.content__item.active')
-      .find('.content__item__header')
+  setTimeout(() => {
+    $('.services .tabs-box__item.active')
+      .find('.services .content__header')
       .addClass('active')
       .next().stop(false)
       .slideDown()
   }, 100)
 
-  $('.content__item__header').click(function() {
+  $('.services .content__header').click(function() {
     if(!$(this).hasClass('active')) {
-      $('.content__item.active')
+      $('.services .tabs-box__item.active')
         .next().stop(false)
         .slideUp()
-      $('.content__item').removeClass('active')
-      $('.content__item__header.active').removeClass('active')
+      $('.services .content__header').removeClass('active')
+      $('.services .content__header.active').removeClass('active')
       $(this)
         .parent()
         .addClass('active')
@@ -133,10 +136,10 @@ if(window.innerWidth < 1024) {
       $(this)
         .next().stop(false)
         .slideUp()
-      $('.content__item').removeClass('active')
-      $('.content__item__header.active').removeClass('active')
+      $('.services .tabs-box__item').removeClass('active')
+      $('.services .content__header.active').removeClass('active')
     }
-  })*/
+  })
 } else {
   $('.services .tabs-box__item').click(function(e) {
     e.preventDefault()
@@ -158,9 +161,16 @@ if(window.innerWidth < 1024) {
 //open menu sidebar
 $(".open-sidebar-menu").click(function(){
   $(".container-nav").toggleClass("active")
-  $('.container-header').toggleClass('fixed-header');
-  $(".brand.white-color").toggleClass("active-logo");
-  $(".brand.blue-color").toggleClass("active-logo");
+  $('.container-header').toggleClass('fixed-header')
+  $(".brand.white-color").toggleClass("active-logo")
+  $(".brand.blue-color").toggleClass("active-logo")
   $(".megamenu-container").removeClass("active")
+  
+  if($(this).hasClass("icon-menu")){
+    $(this).removeClass("icon-menu").addClass("icon-close")
+  }else{
+    $(this).removeClass("icon-close").addClass("icon-menu")
+  }
+  $(".overlay").toggleClass("active");
   $("body").toggleClass("active")
 })
