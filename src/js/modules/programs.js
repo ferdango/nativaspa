@@ -28,7 +28,7 @@ tns({
 
   
 var bannerHome = tns({
-    container : '.banner-home-container',
+    container : '.banner-programs-container',
     mouseDrag : true,
     items     : 1,
     axis: 'horizontal',

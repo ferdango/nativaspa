@@ -8,7 +8,7 @@
     transition: opacity .3s ease-in-out;
     opacity: 0;
     &.active{
-      z-index: 100;
+      z-index: 30;
       opacity: 1;
       top: 0;
     }

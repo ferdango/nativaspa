@@ -1,4 +1,4 @@
-.banner-home{
+.banner-home, .banner-programs, .banner-treatments{
     position: relative;
 
     & .blue-content{
@@ -97,6 +97,7 @@
         right:0;
         padding: 0 7%;
         z-index: 5;
+        font-family: $PrimaryLight;
         @include desde(s){
             font-size: 36px;
             
@@ -110,7 +111,7 @@
         .bold{
             margin-top: 5px;
             font-size: 32px;
-            font-family: $PrimaryBold;
+            font-family: $PrimarySemi;
             text-align: center;
             @include desde(s){
                 font-size: 36px;
@@ -164,7 +165,7 @@
             padding: 15px 7px;
             border-top: 5px solid rgba($white, .7);
             color: $white;
-            font-family: $PrimarySemi;
+            font-family: $PrimaryLight;
             cursor: pointer;
             margin-right: 0;
             width: 100%;
@@ -183,7 +184,7 @@
                 display: none;
                 @include desde(s){
                     display: block;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }
             }
 

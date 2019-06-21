@@ -9,7 +9,12 @@
     transition: all .35s ease-in-out;
     display: none;
     flex-direction: column;
-    
+    max-width: 320px;
+
+    @include desde(m){
+        max-width: initial;
+    }
+
     &.active{
         display: flex;
         height: 100%;
@@ -81,10 +86,15 @@
         margin-left: auto;
         margin-right: auto;
         padding: 30px 7%;
-        padding-top: 50px;
-        grid-template-columns: minmax(60%, 70%) minmax(30%, 40%);
+        padding-top: 10px;
+        grid-template-columns: 1fr;
         grid-column-gap: 10px;
         font-family: $PrimaryRegular;
+
+        @include desde(m){
+            padding-top: 50px;
+            grid-template-columns: minmax(60%, 70%) minmax(30%, 40%);
+        }
 
         .tabs-home-container__body{
             max-width: 100%;
@@ -95,12 +105,12 @@
                     justify-content: center;
                     align-items: center;
                     text-transform: capitalize;
-                    padding: 0;
+                    padding: 20px 0;
                     justify-content: flex-start;
 
                     .icon{
-                        width: 50px;
-                        height: 50px;
+                        width: 30px;
+                        height: 30px;
                         margin-right: 20px;
                     }
                 }
@@ -110,16 +120,46 @@
                 width: 100%;
                 padding: 20px 0;
                 .content{
-                    width: 100%;
+                    margin-bottom: 0;
+                    &__header{
+                        width: 100%;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid rgba(#5d5d5d, .45);
+                        padding: 20px 0;
+                        color: #1c1c1c;
+                        text-transform: uppercase;
+                        @include desde(m){
+                            display: none;
+                        }
+                    }
+                    .box{
+                        display: none;
+                        @include desde(m){
+                            display: block;
+                        }
+                    }
                     .paragraph{
                         font-size: 14px;
-                        font-family: $PrimarySemi;
+                        font-family: $PrimaryRegular;
                         position: relative;
                         padding: 10px 15px;
                         display: inline-block;
+                        color: rgba(#5d5d5d, .68);
                         margin-bottom: 0;
-                        padding-left: 20px;
+                        padding-left: 0;
                         text-transform: capitalize;
+                        border-bottom: 1px solid rgba(#5d5d5d, .15);
+                        @include desde(m){
+                            padding: 10px 15px;
+                            color: $blue-dark;
+                            padding-left: 20px;
+                            font-family: $PrimarySemi;
+                            border-bottom: none;
+                            padding: 6px 15px;
+                        }
                         
                         &::before{
                             content: "";
@@ -128,9 +168,13 @@
                             height: 6px;
                             border-radius: 50%;
                             position: absolute;
-                            display: inline-block;
+                            display: none;
                             left: 0;
                             top: calc(50% - 3px);
+
+                            @include desde(m){
+                                display: inline-block;
+                            }
                         }
                     }
                 }
@@ -143,6 +187,7 @@
             max-width: 90%;
             left: 0;
             display: none;
+            max-height: 310px;
 
             @include desde(m){
                 display: block;
@@ -179,21 +224,3 @@
         }
     }
 }
-
-[data-aos="megamenu-animation"] {
-    opacity: 0;
-    transition: all .45s;
-    transition-timing-function: cubic-bezier(.250, .250, .750, .750);
-  
-    &.aos-animate {
-      opacity: 1;
-    }
-  
-    @include desde(m) {
-      //transform: translateY(-100%);
-  
-      &.aos-animate {
-        transform: translateY(0);
-      }
-    }
-  }

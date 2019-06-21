@@ -9,7 +9,7 @@ $(".our-procedures__slider__item").click(function(){
 
 
 var bannerHome = tns({
-    container : '.banner-home-container',
+    container : '.banner-treatments-container',
     mouseDrag : true,
     items     : 1,
     axis: 'horizontal',

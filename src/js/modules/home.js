@@ -1,15 +1,18 @@
 $("#video-gallery").lightGallery();
 
 $(document).ready(function(){
+    $('.container-header').removeClass('fixed-header');
+    $(".brand.blue-color").css("display" , "none");
+    $(".brand.white-color").css("display" , "block");
   $(".banner-home .tns-nav button").click(function(){      
     resetAnimation()
   })
 })
 
+//LOADING BANNER PROGRESS BAR
 function resetAnimation(){
   var el     = $("#bar"),  
-      newone = el.clone(true);
-            
+      newone = el.clone(true);     
   el.before(newone);     
   $("." + el.attr("class") + ":last").remove();
 
@@ -62,8 +65,8 @@ tns({
 })
 
 
-//------
-// tab
+
+// SPECIALITY TAB
 if(window.innerWidth < 1024) {
   setTimeout(() => {
     $('.speciality .content-tab.active')
@@ -113,8 +116,9 @@ if(window.innerWidth < 1024) {
   })
 }
 
+//MENU FUNCTION
 $(window).scroll(function(){
-    if ($(window).scrollTop() >= 70) {
+    if ($(window).scrollTop() > 0) {
         $('.container-header').addClass('fixed-header');
         $(".brand.blue-color").css("display" , "block");
         $(".brand.white-color").css("display" , "none");

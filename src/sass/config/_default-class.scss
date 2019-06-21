@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   font-family: $PrimaryRegular;
   position: relative;
-  padding-top: 70px;
+  //padding-top: 70px;
   @include desde(m){
     padding-top: 0px;
   }
@@ -29,11 +29,17 @@ body {
         padding: 0 7%;
         position: absolute;
       }
-
+      .icon-social{
+        color: $white;
+      }
       .container-nav__link{
         @include desde(m){
           color: $white;
         }
+      }
+
+      .icon-menu{
+        color: $white;
       }
     }
   }

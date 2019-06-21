@@ -97,7 +97,7 @@
                     font-size: 45px;
                     width: 70%;
                     justify-content: flex-start;
-
+                    font-family: $PrimaryLight;
                     .bold{
                         font-family: $PrimaryBold;
                         font-size: 50px;
@@ -126,6 +126,7 @@
                     font-size: 16px;
                     line-height: 1.75;
                     color: $blue-dark;
+                    font-family: $PrimaryLight;
 
                     @include desde(s){
                         line-height: 1.4;
