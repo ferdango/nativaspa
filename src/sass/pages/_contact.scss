@@ -12,7 +12,7 @@
         img{
             width: 100%;
             object-fit: cover;
-            height: 360px;
+            height: 400px;
         }
     }
 
@@ -27,6 +27,7 @@
         left: 5%;
         font-size: 14px;
         color: $blue-dark;
+        font-family: $PrimaryLight;
 
         @include desde(m){
             left: 7%;
@@ -36,6 +37,7 @@
         .bold{
             margin-top: 5px;
             font-size: 28px;
+            font-family: $PrimaryBold;
             @include desde(s){
                 font-size: 32px;
             }

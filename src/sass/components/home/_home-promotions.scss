@@ -81,9 +81,11 @@
                 }
                 .information-nav{
                     margin: 0 0 20px;
+                    font-family: $SecundaryRegular;
+                    font-size: 16px;
                     &__item{
                         padding-left: 0;
-                        line-height: 2;
+                        line-height: 1.5;
                         text-align: center;
                         max-width: initial;
                         @include desde(s){

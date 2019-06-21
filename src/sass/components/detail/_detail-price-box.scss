@@ -10,7 +10,7 @@
     }
 
     &__header{
-        font-family: $PrimaryBold;
+        font-family: $PrimarySemi;
         font-size: 18px;
         width: 100%;
         margin-bottom: 20px;
@@ -29,16 +29,16 @@
             &__item{
                 padding: 7px 0;
                 padding-left: 25px;
-                font-family: $PrimarySemi;
-                 font-size: 14px;
+                font-family: $SecundaryRegular;
+                 font-size: 15px;
             }
         }
 
         .description-text{
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1.35;
             text-align: center;
-
+            font-family: $SecundaryRegular;
             @include desde(s){
                 text-align: left;
             }
@@ -46,7 +46,7 @@
     }
 
     &__footer{
-        font-family: $PrimarySemi;
+        font-family: $SecundaryRegular;
         padding: 25px 0;
         padding-bottom: 0;
         display: flex;
@@ -57,7 +57,7 @@
             align-items: flex-start;
         }
         .bold{
-            font-family: $PrimaryBold;
+            font-family: $SecundarySemi;
             font-size: 24px;
             line-height: 1.6;
         }

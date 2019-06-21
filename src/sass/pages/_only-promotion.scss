@@ -1,15 +1,5 @@
 .only-promotion{
     width: 100%;
-    
-    &__section-breadcum{
-        width: 100%;
-        background: $blue-light;
-        padding: 20px 5%;
-        @include desde(s){
-            padding: 20px 7%;
-        }
-    }
-
     &__tabs{
         width: 100%;
         padding: 0 5%;
@@ -35,7 +25,8 @@
             padding: 25px 0;
             .title{
                 font-size: 18px;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
+                font-family: $PrimaryLight;
             }
 
             .subtitle{
@@ -102,7 +93,7 @@
                 &__price{
                     width: 100%;
                     color: $blue-light;
-                    font-family: $PrimaryBold;
+                    font-family: $PrimarySemi;
                     .small{
                         font-size: 14px;
                         text-transform: uppercase;
@@ -131,12 +122,12 @@
 
                     &__menu{
                         padding: 10px 0;
-                        font-family: $PrimaryRegular;
+                        font-family: $SecundaryRegular;
 
                         &__item{
                             width: 100%;
                             padding-left: 25px;
-                            font-size: 14px;
+                            font-size: 16px;
                             margin-bottom: 10px;
                             &:last-child{
                                 padding-bottom: 0;

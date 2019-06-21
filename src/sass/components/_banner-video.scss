@@ -44,7 +44,7 @@
 
             .title{
                 font-size: 36px;
-                font-family: $PrimaryRegular;
+                font-family: $PrimaryLight;
                 max-width: 300px;
                 margin-bottom: 30px;
                 text-align: center;
@@ -60,7 +60,8 @@
             }
             .description{
                 max-width: 200px;
-                line-height: 2;
+                line-height: 1.5;
+                font-family: $SecundaryRegular;
             }
         }
 

@@ -31,16 +31,18 @@
         .title{
             color: $blue-dark;
             font-size: 28px;
-            font-family: $PrimaryBold;
+            font-family: $PrimaryRegular;
             padding: 20px 0px;
             position: relative;
+            z-index: 1;
             .letter-floor{
                 width: 350px;
                 height: 80px;
                 position: absolute;
                 left: -50px;
                 top: calc(50% - 40px);
-                background: rgba($blue-dark, .35);
+                z-index: -1;
+               // background: rgba($blue-dark, .35);
             }
         }
     }
@@ -73,6 +75,7 @@
                 &__item{
                     cursor: pointer;
                     padding: 20px 0;
+                    font-family: $PrimaryLight;
                     font-size: 16px;
                     max-width: 100%;
                     line-height: 1.35;
@@ -157,7 +160,7 @@
                     }
                     .title{
                         color: $blue-light;
-                        font-family: $PrimaryBold;
+                        font-family: $PrimarySemi;
                         font-size: 22px;
                         margin: 30px 0;
                     }
@@ -165,7 +168,7 @@
                     .paragraph{
                         color: $blue-dark;
                         font-size: 16px;
-                        font-family: $PrimarySemi;
+                        font-family: $PrimaryMedium;
                         line-height: 1.7;
                         margin-bottom: 30px;
                     }

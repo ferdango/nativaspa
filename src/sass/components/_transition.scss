@@ -18,8 +18,9 @@
         font-size: 24px;
         color: $blue-light;
         text-align: center;
+        font-family: $PrimaryLight;
         .bold{
-            font-family: $PrimaryBold;
+            font-family: $PrimarySemi;
         }
 
         .last-word{
@@ -33,7 +34,7 @@
                 height: 10px;
                 position: absolute;
                 border-radius: 50%;
-                bottom: 6px;
+                bottom: 3px;
                 right: 12px;
             }
         }

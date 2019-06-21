@@ -34,9 +34,10 @@
             color: $blue-dark;
             margin-bottom: 50px;
             text-align: center;
+            font-family: $PrimaryLight;
 
             .bold{
-                font-family: $PrimaryBold;
+                font-family: $PrimarySemi;
             }
 
             @include desde(m){
@@ -66,7 +67,7 @@
                 position: relative;
                 transition: all .35s ease-in-out;
                 color: $orange;
-                font-family: $PrimaryBold;
+                font-family: $PrimaryRegular;
                 padding: 5px 0;
                 margin-bottom: 30px;
                 cursor: pointer;
@@ -80,7 +81,7 @@
                     content: "";
                     width: 0;
                     background: $orange;
-                    height: 4px;
+                    height: 3px;
                     position: absolute;
                     display: inline-block;
                     left: 0;
@@ -101,7 +102,7 @@
                         content: "";
                         width: 100%;
                         background: $orange;
-                        height: 4px;
+                        height: 3px;
                         position: absolute;
                         display: inline-block;
                         bottom: -3PX;
