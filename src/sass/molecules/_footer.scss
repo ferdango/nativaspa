@@ -15,12 +15,12 @@
             align-items: flex-start;
             grid-template-columns: 1fr; 
             
-            @include desde(s){
+            @include desde(m){
                 grid-template-columns: minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px); 
             }
 
             .footer-nav-section{
-                display: flex;
+                display: none;
                 width: 100%;
                 max-width: initial;
                 flex-direction: column;
@@ -28,13 +28,13 @@
                 justify-content: flex-start;
 
                 @include desde(s){
-                    //width: 25%;
                     max-width: 400px;
                     align-items: flex-start;
                 }
 
                 @include desde(m){
                     //width: 25%;
+                    display: flex;
                     max-width: 200px;
                     //align-items: flex-start;
                 }
@@ -109,6 +109,23 @@
                             &::before{
                                 display: none;
                             }
+                        }
+                    }
+                }
+
+                &.contact{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+
+                    @include desde(m){
+                        justify-content: initial;
+                        align-items: initial;
+                        margin: initial;
+
+                        .title{
+                            text-align: center;
                         }
                     }
                 }

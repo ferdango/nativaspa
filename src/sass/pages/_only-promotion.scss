@@ -6,6 +6,10 @@
         @include desde(m){
             padding: 0 7%;
         }
+
+        .general-tabs__body{
+            padding-top: 0;
+        }
     }
 
     &__main{

@@ -1,4 +1,4 @@
-tns({
+var bannerInstallations = tns({
   container : '.banner-instalations-container__banner',
   mouseDrag : true,
   items     : 1,
@@ -13,6 +13,12 @@ tns({
   responsive: {
   },
   onInit    : function() {
+      $(".banner-instalations-container__banner__controls .right").click(function(){
+        bannerInstallations.goTo('next')
+      })
 
+      $(".banner-instalations-container__banner__controls .left").click(function(){
+        bannerInstallations.goTo('prev')
+      })
   }
 });
