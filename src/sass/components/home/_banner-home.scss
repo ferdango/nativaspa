@@ -21,66 +21,11 @@
         }
     }
 
-    /*[data-action=stop]{
-        display: none;
-    }*/
-
-    /*.tns-nav{
-        display: none;
-        width: 100%;
-        max-width: 1400px;
-        height: 120px;
-        //display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 20px;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 10px;
-        margin-left:auto;
-        margin-right:auto;
-        left:0;
-        right:0;
-        padding: 0 5%;
-        z-index: 5;
-        @include desde(m){
-            padding: 0 7%;
-        }
-
-        button{
-            height: 100%;
-            background: transparent;
-            border: none;
-        }
-    }*/
-    
     &-container{
         width: 100%;
         overflow: hidden;
         position: relative;
         margin-bottom: 5px;
-        &::before{
-            content: "";
-            width: 45%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: inline-block;
-            opacity: .5;
-            background: linear-gradient(to right, rgba(#505050, .3) 0%, rgba(0,0,0,0) 30%);
-        }
-        &::after{
-            content: "";
-            width: 100%;
-            height: 35%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: inline-block;
-            opacity: .5;
-            background: linear-gradient(to bottom, rgba(#505050, .9) 0%, rgba(0,0,0,0) 30%);
-        }
 
         &__item{
             position: relative;
@@ -88,11 +33,25 @@
     }
     &__image{
         width: 100%;
+        position: relative;
+        &::after{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            //opacity: .5;
+            //z-index: 20;
+            background: linear-gradient(to right, rgba(#a9bbc5, .55) 40%, rgba(#a9bbc5, .1) 55%);
+        }
         img{
             width: 100%;
             object-fit: cover;
             height: 600px;
-
+            
+            
             @include desde(s){
                 height: 750px;
             }
@@ -277,3 +236,21 @@
     }
   }
   
+  .banner-home-container{
+    &::after{
+        content: "";
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        opacity: .5;
+        background: linear-gradient(to bottom, rgba(#505050, .9) 0%, rgba(0,0,0,0) 30%);
+    }
+      
+    &__image{
+        position: relative;
+        
+    }
+  }

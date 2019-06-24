@@ -8,7 +8,7 @@
         padding: 0 7%;
     }
     @include desde(m){
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr minmax(40%, 400px);
         grid-column-gap: 10px;
         align-items: center;
     }
@@ -16,15 +16,20 @@
     &__image{
         height: 100%;
         order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include desde(m){
             order: 1;
         }
         img{
             height: auto;
+            display: inline-block;
             object-fit: cover;
-
+            margin: auto;
             @include desde(m){
-                height: 100%;
+                //height: 100%;
+                object-fit: contain;
             }
         }
     }
