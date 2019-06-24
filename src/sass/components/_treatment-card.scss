@@ -35,6 +35,11 @@
         height: 100%;
         object-fit: cover;
         object-position: left;
+        display: none;
+
+        @include desde(s){
+            display: block;
+        }
     }
 
     &__content{
@@ -49,7 +54,16 @@
             height: 50px;
             margin-bottom: 20px;
         }
+        &__header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
+            @include desde(s){
+                align-items: flex-start;
+            }
+        }
         .title{
             display: flex;
             flex-direction: column;
@@ -59,22 +73,37 @@
             font-size: 22px;
             font-family: $PrimaryBold;
             text-transform: capitalize;
+            text-align: center;
+            @include desde(s){
+                text-align: left;
+            }
         }
 
         &__body{
             display: none;
             transition: all .35s ease-in-out;
 
-            .description__item{
-                font-size: 12px;
-                font-family: $PrimaryLight;
-                line-height: 2.25;
-                transition: all .35s ease-in-out;
-                &:hover{
-                    font-size: 14px; 
-                }
-                &__link{
-                    color: $white;
+            .description{
+                &__item{
+                    font-size: 15px;
+                    font-family: $PrimaryLight;
+                    line-height: 2.25;
+                    transition: all .35s ease-in-out;
+                    text-align: center;
+
+                    @include desde(s){
+                        text-align: left;
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        font-size: 17px; 
+                        @include desde(s){
+                            font-size: 14px;
+                        }
+                    }
+                    &__link{
+                        color: $white;
+                    }
                 }
             }
 
@@ -83,11 +112,16 @@
                 background: $white;
                 width: 45px;
                 height: 45px;
+                margin: auto;
                 margin-top: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 //padding: 10px;
+
+                @include desde(s){
+                    margin-left: 0;
+                }
                 cursor: pointer;
                 .icon-plus{
                     font-size: 24px;
