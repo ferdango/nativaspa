@@ -59,33 +59,31 @@
         overflow: hidden;
         position: relative;
         margin-bottom: 5px;
+        &::before{
+            content: "";
+            width: 45%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            opacity: .5;
+            background: linear-gradient(to right, rgba(#505050, .3) 0%, rgba(0,0,0,0) 30%);
+        }
+        &::after{
+            content: "";
+            width: 100%;
+            height: 35%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            opacity: .5;
+            background: linear-gradient(to bottom, rgba(#505050, .9) 0%, rgba(0,0,0,0) 30%);
+        }
 
         &__item{
             position: relative;
-            
-            
-            &::before{
-                content: "";
-                width: 45%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: inline-block;
-                opacity: .5;
-                background: linear-gradient(to right, rgba(#505050, .3) 0%, rgba(0,0,0,0) 30%);
-            }
-            &::before{
-                content: "";
-                width: 100%;
-                height: 35%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: inline-block;
-                opacity: .5;
-                background: linear-gradient(to bottom, rgba(#505050, .9) 0%, rgba(0,0,0,0) 30%);
-            }
         }
     }
     &__image{
@@ -236,6 +234,20 @@
                 transition: all .35s ease-out;
                 @include desde(s){
                     display: block;
+                }
+            }
+
+            &:hover{
+                transition: all .35s ease-out;
+                border-top: 2.5px solid rgba($white, 1);
+                font-family: $PrimaryMedium;
+                .title{
+                    font-size: 16px;
+                    transition: all .35s ease-out;
+                }
+                .subtitle{
+                    font-size: 12px;
+                    transition: all .35s ease-out;
                 }
             }
         }

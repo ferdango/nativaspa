@@ -1,6 +1,26 @@
 .exclusive-promotions-container{
     width: 100%;
     background: rgba(#cacdff, .75);
+    position: relative;
+
+    &__logo{
+        position: absolute;
+        bottom: -80px;
+        left: -50px;
+        width: 20%;
+        max-width: 220px;
+        height: 300px;
+        display: none;
+
+        @include desde(m){
+            display: block;
+        }
+
+        .image{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     &__wrapper{
         width: 100%;
