@@ -25,8 +25,13 @@ tns({
     mouseDrag : true,
     loop: false,
     slideBy: 1,
-    axis: 'vertical',
-    nav: false
+    axis: 'horizontal',
+    nav: false,
+    responsive: {
+      768: {
+        axis: 'vertical',
+      }
+    }
   });
   
   $(".programs .cards").click(function(){
@@ -44,6 +49,25 @@ var bannerHome = tns({
     autoplayButton: false,
     autoplayButtonOutput: false,
     navContainer: '.banner-programs__info-footer',
+    controls  : false,
+    lazyload  : true,
+    speed     : 400,
+    responsive: {
+    },
+    onInit    : function() {
+    }
+  })
+
+
+  var sliderFloatProms = tns({
+    container : '.float-promotions__proms .slider',
+    mouseDrag : true,
+    items     : 3,
+    slideBy: 1,
+    nav: false,
+    autoplay: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
     controls  : false,
     lazyload  : true,
     speed     : 400,

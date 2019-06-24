@@ -65,10 +65,23 @@
                 width: 100%;
                 //background: #1c1c1c;
                 display: grid;
-                grid-template-columns: minmax(20%, 80px) 1fr;
-                grid-column-gap: 10px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr min-content;
+                grid-row-gap: 10px;
                 padding-top: 25px;
+
+                @include desde(m){
+                    grid-template-columns: minmax(20%, 80px) 1fr;
+                    grid-template-rows: 1fr;
+                    grid-row-gap: 0;
+                    grid-column-gap: 10px;
+                }
                 &__vertical{
+                    order: 2;
+
+                    @include desde(m){
+                        order: 1;
+                    }
                     &__item{
                         margin-bottom: 10px;
                         &:last-child{
@@ -78,6 +91,11 @@
                 }
 
                 &__horizontal{
+                    order: 1;
+
+                    @include desde(m){
+                        order: 2;
+                    }
                     &__item{
                         height: 100%;
                         img{

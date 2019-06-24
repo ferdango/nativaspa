@@ -9,12 +9,16 @@
     font-family: $PrimaryRegular;
     font-size: 14px;
     letter-spacing: 0.45px;
-
+    padding: 0 5%;
      @include desde(xs){
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         font-size: 12px;
+     }
+
+     @include desde(m){
+        padding: 0 7%;
      }
 
     .link{
@@ -41,11 +45,11 @@
     }
 
     &-container{
-        padding: 20px 5%;
-        max-width: 1400px;
+        padding: 20px 0;
+        //max-width: 1400px;
         margin: auto;
         @include desde(s){
-            padding: 25px 7%;
+            padding: 25px 0;
         }
 
         &.blue-light{

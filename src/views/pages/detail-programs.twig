@@ -75,6 +75,33 @@
         
     </div>
 
+    <div class="float-promotions">
+        
+        <div class="box">
+            <div class="float-promotions__title">
+                <strong class="bold">Conoce nuestras promociones<br></strong>
+                que tenemos para ti
+            </div>
+            <div class="float-promotions__proms">
+                <div class="body slider">
+                    {% include '../components/promotion-card.twig' %}
+                    {% include '../components/promotion-card.twig' %}
+                    {% include '../components/promotion-card.twig' %}
+                    {% include '../components/promotion-card.twig' %}
+                    {% include '../components/promotion-card.twig' %}
+                    {% include '../components/promotion-card.twig' %}
+                </div>
+                <div class="float-promotions__action">
+                    <div class="btn btn-blue-light">Ver promociones</div>
+                </div>
+                
+            </div>
+        </div>
+         <div class="float-promotions__image"><img class="image" src="../assets/img/logonativa1.png" /></div>
+    </div>
+    
+   
+
     {% include '../components/modal-hablemos.twig' %}
 
 {% endblock %}
