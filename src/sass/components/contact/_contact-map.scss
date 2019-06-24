@@ -35,9 +35,11 @@
         @extend %places-box;
         &.all-places{
             top: calc(50% - 250px);
-            left: 7%;
+            left: calc(50% - 165px);
             transform: translateX(-110%);
-
+            @include desde(m){
+                left: 7%;
+            }
             &.active{
                 @extend %activate-places-box;
             }
@@ -56,12 +58,19 @@
             height: 100%;
             left: 0;
             top: 0;
-            max-width: 35%;
+            max-width: 100%;
             padding: 15px 5%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             transform: translateX(-100%);
+            @include desde(s){
+                max-width: 50%;
+            }
+            @include desde(m){
+                max-width: 35%;
+            }
+
             &.active{
                 @extend %activate-places-box;
             }
