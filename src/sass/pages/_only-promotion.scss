@@ -129,6 +129,17 @@
                             padding-left: 25px;
                             font-size: 16px;
                             margin-bottom: 10px;
+                            position: relative;
+                            &::before{
+                                position: absolute;
+                                left: 0;
+                                color: $blue-light;
+                                font-size: 14px;
+                                display: inline-block;
+                                content: "\e90e";
+                                font-family: icomoon;
+                            }
+
                             &:last-child{
                                 padding-bottom: 0;
                             }

@@ -4,19 +4,12 @@ $(document).ready(function(){
     $('.container-header').removeClass('fixed-header');
     $(".brand.blue-color").css("display" , "none");
     $(".brand.white-color").css("display" , "block");
-  $(".banner-home .tns-nav button").click(function(){      
-    resetAnimation()
-  })
+    $(".banner-home__info-footer__item").click(function(){      
+      resetAnimation()
+    })
 })
 
-//LOADING BANNER PROGRESS BAR
-function resetAnimation(){
-  var el     = $("#bar"),  
-      newone = el.clone(true);     
-  el.before(newone);     
-  $("." + el.attr("class") + ":last").remove();
 
-}
 
 
 var bannerHome = tns({
@@ -28,7 +21,7 @@ var bannerHome = tns({
   autoplay: true,
   autoplayButton: false,
   autoplayButtonOutput: false,
-  nav       : true,
+  navContainer: '.banner-home__info-footer',
   controls  : false,
   lazyload  : true,
   speed     : 400,

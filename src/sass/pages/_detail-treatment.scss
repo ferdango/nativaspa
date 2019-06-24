@@ -16,11 +16,12 @@
         width: 100%;
         //max-width: 100%;
         margin: auto auto 60px;
-
+        
         @include desde(m){
             width: 90%;
             max-width: initial;
             margin-bottom: 0px;
+            margin-left: 0;
             max-width: 360px;
         }
     }

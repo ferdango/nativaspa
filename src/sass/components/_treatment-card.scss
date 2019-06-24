@@ -66,16 +66,16 @@
             transition: all .35s ease-in-out;
 
             .description__item{
-                color: $white;
                 font-size: 12px;
                 font-family: $PrimaryLight;
-                line-height: 2;
-c
-                &__link{
-                    //margin-left: 25px;
-                    color: inherit;
+                line-height: 2.25;
+                transition: all .35s ease-in-out;
+                &:hover{
+                    font-size: 14px; 
                 }
-                //padding: 10px 15px;
+                &__link{
+                    color: $white;
+                }
             }
 
             .more-info{

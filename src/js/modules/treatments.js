@@ -1,3 +1,10 @@
+$(document).ready(function(){
+    $(".banner-treatments__info-footer__item").click(function(){      
+        resetAnimation()
+    })
+})
+
+
 $(".treatment-service-card").click(function(){
     window.location.href = 'detail-treatment.html';
 })
@@ -17,7 +24,7 @@ var bannerHome = tns({
     autoplay: true,
     autoplayButton: false,
     autoplayButtonOutput: false,
-    nav       : true,
+    navContainer: '.banner-treatments__info-footer',
     controls  : false,
     lazyload  : true,
     speed     : 400,

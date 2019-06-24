@@ -69,7 +69,7 @@
 
         @include desde(m){
             max-width: 768px;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: min-content 1fr;
             grid-template-rows: 1fr;
         }
 
@@ -96,21 +96,50 @@
                     border-bottom: 1px solid rgba($blue-dark ,.1);
                     height: auto;
                     transition: all .35s ease-out;
-
+                    
                     @include desde(m){
-                        max-width: 85%;
+                        //max-width: 85%;
                         padding: 20px 100px 20px 0px;
                         //height: 95px;
                         font-size: 24px;
+                        transition: all .45s ease-out;
+                        //border-right: 2.5px solid transparent;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 4.5px;
+                            height: 55%;
+                            right: 0;
+                            top: 22.5%;
+                            transition: all .45s ease-out;
+                            background: transparent;
+                            display: inline-block;
+                        }
+                        
+                        &.active{
+                            color: $blue-dark;
+                            transition: all .45s ease-out;
+                            
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                width: 4.5px;
+                                height: 55%;
+                                right: 0;
+                                top: 22.5%;
+                                transition: all .45s ease-out;
+                                background: $blue-light;
+                                display: inline-block;
+                            }
+                        }
                     }
     
                     &:last-child{
                         border-bottom: none;
                     }
     
-                    &.active{
-                        color: $blue-dark;
-                    }
+                    
 
                     &:hover{
                         transition: all .35s ease-out;
@@ -124,6 +153,7 @@
                 /*display: flex;
                 flex-direction: column;
                 align-items: flex-start;*/
+                position: relative;
 
                 @include desde(m){
                     padding: 20px 15%;
@@ -132,14 +162,23 @@
                 .content{   
                     display: block;
                     margin-bottom: 30px;
+                    
                     &:last-child{
                         margin-bottom: 0;
                     }
                     @include desde(m){
                         margin-bottom: 0;
-                        display: none;
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                        transition: all .5s ease-out;
                         &.active{
-                            display: block;
+                            position: absolute;
+                            opacity: 1;
+                            visibility: visible;
+                            z-index: 1;
+                            transition: all .5s ease-out;
                         }
                     }
                     
@@ -184,6 +223,7 @@
                         font-family: $PrimaryMedium;
                         line-height: 1.7;
                         margin-bottom: 30px;
+                        max-width: 400px;
                     }
 
                 }

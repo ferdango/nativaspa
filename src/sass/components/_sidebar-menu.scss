@@ -1,0 +1,90 @@
+.sidebar-menu{
+    font-family: $PrimaryRegular;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    z-index: 500;
+    top: 100px;
+    background: $white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    transition: all .5s ease-out;
+    transform: translateX(-100%);
+    padding: 0;
+    letter-spacing: 0.5px;
+    &.active{
+        transform: none;
+    }
+    @include desde(m){
+        display: none;
+    }
+
+    &__header{
+        padding: 30px 7%;
+        width: 100%;
+        background: $blue-light;
+        color: $white;
+        font-size: 18px;
+        cursor: pointer;
+        .icon{
+            margin-right: 25px;
+        }
+    }
+
+    &__list{
+        width: 100%;
+        margin: 0;
+        &__item{
+            font-size: 22px;
+            font-family: $PrimaryRegular;
+            cursor: default;
+            margin-right:0;
+            width: 100%;
+            cursor: pointer;
+            border-bottom: 1px solid rgba($blue-light, .15);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 7%;
+            align-items: center;
+            &:last-child(){
+                margin-right:0;
+            }
+
+            &__link{
+                display: inline-block;
+                padding: 30px 0;
+                position: relative;
+                color: #505050;
+                transition: all .4s ease-out;
+                //text-transform: uppercase;
+                width: 100%;
+            }  
+            
+            .icon{
+                transform: translateX(0%);
+                transition: all .45s ease-out;
+            }
+
+            &:hover{
+                .icon{
+                    transform: translateX(-15px);
+                }
+            }
+        }
+    } 
+
+    .social-box{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 0;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}

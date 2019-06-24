@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  $(".banner-programs__info-footer__item").click(function(){      
+    resetAnimation()
+  })
+})
+
+
 tns({
     container: '.slider-banner__horizontal',
     items: 1,
@@ -36,7 +43,7 @@ var bannerHome = tns({
     autoplay: true,
     autoplayButton: false,
     autoplayButtonOutput: false,
-    nav       : true,
+    navContainer: '.banner-programs__info-footer',
     controls  : false,
     lazyload  : true,
     speed     : 400,
