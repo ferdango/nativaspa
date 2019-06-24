@@ -1,7 +1,6 @@
 tns({
     container : '.our-procedures__slider',
     mouseDrag : true,
-    gutter    : 60,
     items     : 1,
     axis: 'horizontal',
     slideBy: 'page',
@@ -14,12 +13,9 @@ tns({
     speed     : 400,
     responsive: {
       480: {
-        edgePadding: 20,
-        gutter: 20,
         items: 2
       },
       768: {
-        gutter: 30,
         items: 3
       },
       1024: {

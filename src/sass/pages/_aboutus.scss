@@ -19,19 +19,21 @@
         }
 
         &__content{
-            max-width: 540px;
+            //max-width: 1400px;
             width: 100%;
             position: absolute;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             top: calc(50% - 33px);
-            left: 5%;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 14px;
             color: $blue-dark;
+            padding: 0 5%;
 
             @include desde(m){
-                left: 10%;
+                padding: 0 7%;
                 font-size: 18px;
             }
 
