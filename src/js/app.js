@@ -32,10 +32,7 @@ $(".megamenu-container__close").click(function(){
 
 
 $(".container-nav__link").click(function(){
-    
     if(window.innerWidth < 1024) {
-      //$(".open-sidebar-menu").
-
     
     }else{
       $(".container-nav__link").removeClass("active");
@@ -179,15 +176,11 @@ $(".overlay, .sidebar-menu__header").click(function(){
 //OPEN SIDEBAR
 $(".open-sidebar-menu").click(function(){
   $(".sidebar-menu").toggleClass("active")
-  /*$('.container-header').toggleClass('fixed-header')
-  $(".brand.white-color").toggleClass("active-logo")
-  $(".brand.blue-color").toggleClass("active-logo")
-  
-  if($(this).hasClass("icon-menu")){
-    $(this).removeClass("icon-menu").addClass("icon-close")
-  }else{
-    $(this).removeClass("icon-close").addClass("icon-menu")
-  }*/
   $(".overlay").toggleClass("active");
   $("body").toggleClass("active")
+})
+
+
+$(".megamenu-container__content .cards").click(function(){
+  window.location.href = 'detail-programs.html';
 })

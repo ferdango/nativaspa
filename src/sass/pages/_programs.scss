@@ -24,10 +24,10 @@
             flex-direction: column;
             font-family: $PrimaryLight;
 
-            @include desde(s){
+            @include desde(790px){
                 flex-direction: row;
             }
-
+            
             .bold{
                 font-family: $PrimaryBold;
                 margin-right: 7px;

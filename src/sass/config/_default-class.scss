@@ -24,9 +24,13 @@ body {
       box-shadow: none;
       background: transparent;
 
+      &__box{
+        background: transparent;
+      }
+
       @include desde(m){
         box-shadow: none;
-        padding: 0 7%;
+        //padding: 0 7%;
         position: absolute;
       }
       .icon-social{

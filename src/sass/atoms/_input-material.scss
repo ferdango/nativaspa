@@ -9,6 +9,9 @@
     width: 100%;
     border: 1.5px solid #DEDCDE;
     border-radius: 3px;
+    padding: .375rem .75rem;
+    font-family: $PrimaryLight;
+    font-size: 14px;
     &:focus{
       border-color: rgba($blue-dark, .65);
     }
@@ -19,6 +22,9 @@
     min-height: 150px;
     border: 1.5px solid #DEDCDE;
     border-radius: 3px;
+    padding: 15px;
+    font-family: $PrimaryLight;
+    font-size: 14px;
     &:focus{
       border-color: rgba($blue-dark, .65);
     }

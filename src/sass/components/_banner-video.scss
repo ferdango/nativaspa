@@ -79,23 +79,23 @@
         }
 
         .icon-video{
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            margin-top: 50px;
-            background: $white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            @include desde(s){
-                margin-top: 0;
-            }
-
             .icon-play{
                 //width: 100%;
                 color: $blue-dark;
                 font-size: 22px;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                margin-top: 50px;
+                background: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+
+                @include desde(s){
+                    margin-top: 0;
+                }
             }
         }
     }

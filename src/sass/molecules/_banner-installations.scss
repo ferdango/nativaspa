@@ -77,6 +77,28 @@
                     margin-bottom: 0;
                 }
 
+                &.tns-nav-active{
+                    transition: all .35s ease-in-out;
+
+                    &::before{
+                        content: "";
+                        width: 100%;
+                        background: $orange;
+                        height: 3px;
+                        position: absolute;
+                        display: inline-block;
+                        bottom: -3PX;
+                        transition: all .35s ease-in-out;
+
+                        @include desde(s){
+                            bottom: -5px;
+                        }
+                        @include desde(m){
+                            bottom: -15px;
+                        }
+                    }    
+                }
+
                 &::before{
                     content: "";
                     width: 0;
