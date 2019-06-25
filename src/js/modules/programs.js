@@ -16,7 +16,8 @@ tns({
     navContainer: '.slider-banner__vertical',
     controls: false
   });
-  
+  var Orientation = 'horizontal'
+if($(window).width() > 767) Orientation = 'vertical'
   tns({
     container: '.slider-banner__vertical',
     items: 4,
@@ -25,13 +26,8 @@ tns({
     mouseDrag : true,
     loop: false,
     slideBy: 1,
-    axis: 'horizontal',
-    nav: false,
-    responsive: {
-      768: {
-        axis: 'vertical',
-      }
-    }
+    axis: Orientation,
+    nav: false
   });
   
   $(".programs .cards").click(function(){

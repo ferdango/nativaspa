@@ -34,10 +34,11 @@
             }
 
             .subtitle{
-               font-family: $PrimaryBold;
-               font-size: 32px;
+                font-family: $PrimaryBold;
+                font-size: 32px;
+                
                 position: relative;
-               &::after{
+                &::after{
                     content: "";
                     background: $blue-light;
                     border-radius: 50%;
@@ -45,9 +46,10 @@
                     height: 10px;
                     display: inline-block;
                     position: absolute;
-                    bottom: 8px;
-                    right: -30px;
-               }
+                    bottom: 4px;
+                    margin-left: 10px;
+                    //right: 0;
+                }
             }
         }
 

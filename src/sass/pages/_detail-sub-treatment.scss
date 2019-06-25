@@ -20,10 +20,14 @@
             font-size: 18px;
             color: $blue-dark;
             line-height: 1.5;
-            margin-bottom: 50px;
+            margin-bottom: 0;
             display: flex;
             flex-direction: column;
             text-transform: capitalize;
+
+            @include desde(m){
+                margin-bottom: 50px;
+            }
             .bold{
                 font-family: $PrimaryBold;
                 position: relative;
@@ -35,10 +39,16 @@
     &__image{
         position: relative;
         object-fit: cover;
-        display: none;
-
+        //display: none;
+        height: 480px;
+        margin-top: 40px;
         @include desde(s){
-            display: block;
+            //display: block;
+            height: 100%;
+            margin-top: 0;
+        }
+        @include desde(m){
+            height: 100%;
         }
         img{    
             //position: absolute;
