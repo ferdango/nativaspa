@@ -41,16 +41,10 @@ var HELPERS = {
     },
     removeActive() {
       $('.overlay').on('click', () => {
-        if(utilites.statusMenu.menuOpen) closeMenu()
-        for (const i in ACTIVE_OVERLAY) {
-          const element = ACTIVE_OVERLAY[i]
-          let elHasClass = $(`.${element}`).hasClass('active')
-          if(elHasClass)
-            $(`.${element}`)
-              .removeClass('active')
-              .removeAttr('style'),
-            HELPERS.closeOverlay()
-        }
+        /*console.log("here")
+        $(".sidebar-menu, .modal").removeClass("active")
+        $(".overlay").removeClass("active");
+        $("body").removeClass("active")*/
       })
     }
   }

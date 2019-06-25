@@ -58,12 +58,13 @@
                 font-family: $SecundaryRegular;
                 
                 &::before{
-                    content: "";
-                    background-image: url("../img/");
-                    width: 5px;
-                    height: 15px;
+                    content: "\e90e";
+                    font-family: icomoon;
+                    font-size: 12px;
                     display: inline-block;
                     position: absolute;
+                    left: 0;
+                    color: $blue-light;
                 }
             }
 

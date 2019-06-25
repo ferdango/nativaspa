@@ -171,8 +171,13 @@
                     }
                 }
 
-                .btn-reservar{
+                .btn-reserv{
                     padding: 1rem;
+                    width: 100%;
+
+                    @include desde(s){
+                        width: 100%;
+                    }
                 }
             }
         }

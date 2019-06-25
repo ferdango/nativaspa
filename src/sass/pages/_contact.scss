@@ -9,6 +9,18 @@
     }
     &__image{
         width: 100%;
+        position: relative;
+        &::before{
+            content: "";
+            background: rgba(#71A0AD, .2);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            //opacity: .2;
+            display: inline-block;
+            position: absolute;
+        }
         img{
             width: 100%;
             object-fit: cover;

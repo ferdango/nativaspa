@@ -30,14 +30,20 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        min-width: 270px;
+        min-width: initial;
+        
+        @include desde(s){
+            min-width: 270px;
+        }
+
         .icon-menu{
-            margin-right: 20px;
+            margin-right: 5%;
             font-size: 24px;
-            color: #505050;
+            color: $blue-light;
             display: block;
             z-index: 15;
             cursor: pointer;
+            
             @include desde(m){
                 display: none;
             }
@@ -54,7 +60,10 @@
 
         .brand{
             width: 100%;
-            max-width: 150px;
+            max-width: 120px;
+            @include desde(m){
+                max-width: 150px;
+            }
             &.white-color{
                 display: none;
             }
@@ -185,11 +194,15 @@
         justify-content: flex-end;
         align-items: center;
         //width: 100%;
-        min-width: 270px;
+        min-width: initial;
+        @include desde(s){
+            min-width: 270px;
+        }
         .box-social{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            min-width: 270px;
         }
 
         .icon-social{
@@ -230,8 +243,10 @@
         }
     }
 
-    .icon-social, .icon-menu{
+    .icon-social{
         color: #505050 !important;
     }
-
+    .icon-menu{
+        color: $blue-light !important;
+    }
 }

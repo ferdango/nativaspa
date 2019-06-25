@@ -10,7 +10,6 @@
 .treatment-card{
     @extend %treatment-card;
     background: $blue-light;
-
     @include desde(s){
         margin: 0 2.5px 5px;
     }
@@ -145,6 +144,8 @@
     transition: all .35s ease-out;
     cursor: pointer;
     overflow: hidden;
+    width: 100%;
+    max-width: 360px;
     @include desde(s){
         
     }

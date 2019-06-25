@@ -1,5 +1,6 @@
 .service-treatments-container{
     width: 100%;
+    /*
     display: grid;
     grid-template-columns: 1fr;
     //padding-top: 20px;
@@ -11,7 +12,7 @@
 
     @include desde(m){
         grid-template-columns: repeat(4, 1fr);
-    }
+    }*/
 }
 
 .banner-treatments{

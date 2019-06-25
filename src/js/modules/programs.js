@@ -58,7 +58,7 @@ var bannerHome = tns({
   var sliderFloatProms = tns({
     container : '.float-promotions__proms .slider',
     mouseDrag : true,
-    items     : 3,
+    items     : 1,
     slideBy: 1,
     nav: false,
     autoplay: false,
@@ -68,11 +68,20 @@ var bannerHome = tns({
     lazyload  : true,
     speed     : 400,
     responsive: {
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      1024: {
+        items: 4
+      }
     },
     onInit    : function() {
     }
   })
 
-$(".my-promotions-container__body__item").click(function(){
+$(".my-promotions-container__body__item, .float-promotions__proms .slider .promotion-card").click(function(){
     window.location.href = 'detail-programs.html';
 })

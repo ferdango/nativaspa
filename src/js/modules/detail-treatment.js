@@ -1,7 +1,7 @@
 tns({
     container : '.our-procedures__slider',
     mouseDrag : true,
-    items     : 1,
+    items     : 2,
     axis: 'horizontal',
     slideBy: 'page',
     nav       : true,
