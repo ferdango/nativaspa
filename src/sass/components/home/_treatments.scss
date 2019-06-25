@@ -3,7 +3,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr;
-
+    overflow: hidden;
     .treatment-card{
         &:nth-child(2n+1){
             background: #81bbc6;

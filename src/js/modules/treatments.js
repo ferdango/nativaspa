@@ -36,9 +36,9 @@ var bannerHome = tns({
 
 
   var bannerTreatment = tns({
-    container : '.service-treatments-container',
+    container : '.service-treatments-container__list',
     mouseDrag : true,
-    items     : 4,
+    items     : 1,
     slideBy: 1,
     loop: false,
     autoplay: true,
@@ -49,7 +49,16 @@ var bannerHome = tns({
     lazyload  : true,
     speed     : 400,
     responsive: {
-    },
+        480: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        1024: {
+          items: 4
+        }
+      },
     onInit    : function() {
     }
   })
