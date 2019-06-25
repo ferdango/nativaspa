@@ -65,4 +65,11 @@
             max-width: 180px;
         }
     }
+
+
+    &__tabs-box{
+        .general-tabs__body{
+            min-height: 540px;
+        }
+    }
 }

@@ -29,7 +29,7 @@
         width: 100%;
         background: $blue-light;
         color: $white;
-        font-size: 18px;
+        font-size: 15px;
         cursor: pointer;
         margin-bottom: 30px;
         .icon{
@@ -41,7 +41,7 @@
         width: 100%;
         margin: 0;
         &__item{
-            font-size: 18px;
+            font-size: 16px;
             font-family: $PrimaryRegular;
             cursor: default;
             margin-right:0;
@@ -52,18 +52,22 @@
             justify-content: space-between;
             padding: 0 7%;
             align-items: center;
+            flex-direction: column;
             &:last-child(){
                 margin-right:0;
             }
 
             &__link{
-                display: inline-block;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
                 padding: 20px 0;
                 position: relative;
                 color: #505050;
                 transition: all .4s ease-out;
                 //text-transform: uppercase;
-                width: 100%;
+                //width: 100%;
             }  
             
             .icon{
@@ -78,6 +82,38 @@
             }
         }
     } 
+
+
+    &__sublist{
+        display: none;
+        width: 100%;
+        margin: 0;
+        /*opacity: 0;
+        visibility: hidden;
+        z-index: -1;*/
+        transition: all .35s ease-out;
+
+        &.active{
+            display: block;
+        }
+        &__item{
+            width: 100%;
+            padding: 0;
+            border-bottom: 1px solid rgba(#505050 , .15);
+            &:last-child{
+                border-bottom: none;
+            }
+            &__link{
+                display: inline-block;
+                padding: 10px 0;
+                width: 100%;
+                font-size: 14px;
+                color: rgba(#505050 , .55);
+                font-family: $PrimaryLight;
+                
+            }
+        }
+    }
 
     .social-box{
         width: 100%;
