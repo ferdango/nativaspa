@@ -23,10 +23,9 @@ $(".megamenu-container__close").click(function(){
   $(".megamenu-container").removeClass("active")
   $("body").removeClass("active")
   $(".container-nav__link").removeClass("active");
+  $(".container-nav__link").next().find(".content").removeClass("active");
   if(window.innerWidth < 1024) {
     $(".open-sidebar-menu").trigger("click");
-  }else{
-
   }
 })
 
@@ -38,8 +37,8 @@ $(".container-nav__link").click(function(){
       $(".container-nav__link").removeClass("active");
       $(this).addClass("active");
       $(".megamenu-container").removeClass("active");
-      $("body").removeClass("active");
-      $(this).next(".megamenu-container").toggleClass("active");
+      $(this).next().addClass("active");
+      $(this).next().find(".first").addClass("active");
       $('.container-header').addClass('fixed-header');
       $(".brand.white-color").toggleClass("active-logo");
       $(".brand.blue-color").toggleClass("active-logo");

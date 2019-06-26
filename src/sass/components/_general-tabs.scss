@@ -76,9 +76,7 @@
                     position: relative;
                     & .content__item__body{
                         display: block;
-                        /*@include desde(s){
-                            display: block;
-                        }*/
+                        
                     }
                 }
             }

@@ -103,7 +103,11 @@
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
         font-family: $PrimaryRegular;
+        //transform: translateY(-100%);
 
+        &.active{
+            //transform: translateY(0%);
+        }
         @include desde(m){
             padding-top: 50px;
             grid-template-columns: minmax(60%, 70%) minmax(30%, 40%);

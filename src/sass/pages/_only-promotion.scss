@@ -8,7 +8,7 @@
         }
 
         .general-tabs__body{
-            padding-top: 0;
+            //padding-top: 0;
         }
     }
 
@@ -56,7 +56,7 @@
         &__content{
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr min-content;
 
             @include desde(m){
                 grid-template-columns: 65% 35%;
